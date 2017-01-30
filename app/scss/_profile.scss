@@ -1,189 +1,189 @@
 /*=== 10. profile ===*/
 .profileArea{
-	@include mobile-xs{
-		padding: 50px 0 25px 0;
-	}
-	@include tablet{
-		padding: 80px 0 100px 0;
-	}
+  @include mobile-xs{
+    padding: 50px 0 25px 0;
+  }
+  @include tablet{
+    padding: 80px 0 100px 0;
+  }
 }
 .profileImage{
-	position: relative;
-	border-radius: 100%;
-	border: 7px solid rgba($white-color, .5);
-	box-shadow: 0 7px 21px rgba($black-color, .1);
-	@include mobile-xs{
-		width: 254px;
-		height: 254px;
-		margin: 0 auto 30px auto;
-	}
-	@include tablet{
-		width: 160px;
-		height: 160px;
-		margin: 0 auto;
-	}
-	@include desktops{
-		width: 254px;
-		height: 254px;
-	}
-	img{
-		border-radius: 100%;
-		max-width: 100%;
-		height: 100%;
-	}
+  position: relative;
+  border-radius: 100%;
+  border: 7px solid rgba($white-color, .5);
+  box-shadow: 0 7px 21px rgba($black-color, .1);
+  @include mobile-xs{
+    width: 254px;
+    height: 254px;
+    margin: 0 auto 30px auto;
+  }
+  @include tablet{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+  }
+  @include desktops{
+    width: 254px;
+    height: 254px;
+  }
+  img{
+    border-radius: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
 }
 .profilePersonal{
-	margin: 0 0 30px 0;
-	h2{
-		margin: 0 0 15px 0;
-		font-weight: 400;
-	}
-	p{
-		margin: 0 0 15px 0;
-	}
-	.list-unstyled{
-		margin-bottom: 10px;
-		li{
-			position: relative;
-			padding-left: 20px;
-			line-height: 30px;
-			i.fa{
-				font-size: 14px;
-				color: $primary-color;
-				position: absolute;
-				left: 0;
-				right: 0;
-				line-height: 30px;
-			}
-			a{
-				text-decoration: underline;
-				line-height: 30px;
-				color: $text-color;
-			}
-		}
-	}
-	.list-inline{
-		li{
-			a{
-				font-size: 13px;
-				color: #b7b7b7;
-				line-height: 26px;
-				&:hover{
-					color: $text-color;
-				}
-			}
-		}
-	}
+  margin: 0 0 30px 0;
+  h2{
+    margin: 0 0 15px 0;
+    font-weight: 400;
+  }
+  p{
+    margin: 0 0 15px 0;
+  }
+  .list-unstyled{
+    margin-bottom: 10px;
+    li{
+      position: relative;
+      padding-left: 20px;
+      line-height: 30px;
+      i.fa{
+        font-size: 14px;
+        color: $primary-color;
+        position: absolute;
+        left: 0;
+        right: 0;
+        line-height: 30px;
+      }
+      a{
+        text-decoration: underline;
+        line-height: 30px;
+        color: $text-color;
+      }
+    }
+  }
+  .list-inline{
+    li{
+      a{
+        font-size: 13px;
+        color: #b7b7b7;
+        line-height: 26px;
+        &:hover{
+          color: $text-color;
+        }
+      }
+    }
+  }
 }
 .profileSkills{
-	padding: 60px 30px 45px 30px;
-	margin-bottom: 35px;
+  padding: 60px 30px 45px 30px;
+  margin-bottom: 35px;
 }
 .progressSingle{
-	.list-inline{
-		li{
-			line-height: 24px;
-			margin-bottom: 6px;
-		}
-	}
-	.progress{
-		height: 6px;
-		margin-bottom: 15px;
-		overflow: hidden;
-		background-color: #d8d8d8;
-		border-radius: 0;
-		box-shadow: none;
-	}
-	.progress-bar{
-		background-color: $primary-color;
-		box-shadow: none;
-	}
+  .list-inline{
+    li{
+      line-height: 24px;
+      margin-bottom: 6px;
+    }
+  }
+  .progress{
+    height: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background-color: #d8d8d8;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .progress-bar{
+    background-color: $primary-color;
+    box-shadow: none;
+  }
 }
 .profileExtra{
-	margin-bottom: 45px;
+  margin-bottom: 45px;
 }
 .extraTitle{
-	h3{
-		font-size: 20px;
-		line-height: 22px;
-		font-weight: 400;
-	}
+  h3{
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+  }
 }
 .educationDetails{
-	dt{
-		font-size: 15px;
-		font-weight: 600;
-		color: $title-color;
-		margin: 0 0 15px 0;
-	}
-	dd{
-		line-height: 24px;
-		margin: 0 0 24px 0;
-	}
+  dt{
+    font-size: 15px;
+    font-weight: 600;
+    color: $title-color;
+    margin: 0 0 15px 0;
+  }
+  dd{
+    line-height: 24px;
+    margin: 0 0 24px 0;
+  }
 }
 .pageGallery{
-	.list-inline{
-		li{
-			@include mobile-xs{
-				width: 100%;
-			}
-			@include tablet{
-				width: auto;
-			}
-			a{
-				display: block;
-				text-align: center;
-				line-height: 26px;
-				color: $text-color;
-				@include mobile-xs{
-					width: 100%;
-					font-size: 20px;
-					margin-bottom: 25px;
-				}
-				@include tablet{
-					width: 93px;
-					font-size: 12px;
-					margin-bottom: 0;
-				}
-				@include desktops{
-					width: 134px;
-					font-size: 14px;
-				}
-				span{
-					width: 100%;
-					margin-bottom: 15px;
-					display: block;
-					@include mobile-xs{
-						height: auto;
-					}
-					@include tablet{
-						height: 93px;
-					}
-					@include desktops{
-						height: 138px;
-					}	
-					img{
-						@include mobile-xs{
-							width: 100%;
-						}
-						@include tablet{
-							width: auto;
-						}
-					}				
-				}
-			}
-		}
-	}
+  .list-inline{
+    li{
+      @include mobile-xs{
+        width: 100%;
+      }
+      @include tablet{
+        width: auto;
+      }
+      a{
+        display: block;
+        text-align: center;
+        line-height: 26px;
+        color: $text-color;
+        @include mobile-xs{
+          width: 100%;
+          font-size: 20px;
+          margin-bottom: 25px;
+        }
+        @include tablet{
+          width: 93px;
+          font-size: 12px;
+          margin-bottom: 0;
+        }
+        @include desktops{
+          width: 134px;
+          font-size: 14px;
+        }
+        span{
+          width: 100%;
+          margin-bottom: 15px;
+          display: block;
+          @include mobile-xs{
+            height: auto;
+          }
+          @include tablet{
+            height: 93px;
+          }
+          @include desktops{
+            height: 138px;
+          } 
+          img{
+            @include mobile-xs{
+              width: 100%;
+            }
+            @include tablet{
+              width: auto;
+            }
+          }       
+        }
+      }
+    }
+  }
 }
 .fancybox-overlay{
-	background-color: rgba($primary-color, .5);
-	background-image: none;
+  background-color: rgba($primary-color, .5);
+  background-image: none;
 }
 .adjustPadding{
-	@include mobile-xs{
-		padding: 50px 0 0 0;
-	}
-	@include tablet{
-		padding: 50px 0 0 15px;
-	}
+  @include mobile-xs{
+    padding: 50px 0 0 0;
+  }
+  @include tablet{
+    padding: 50px 0 0 15px;
+  }
 }

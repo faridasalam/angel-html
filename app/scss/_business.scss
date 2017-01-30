@@ -2,321 +2,321 @@
 
 /*=== 8.1 ORDER SECTION ===*/
 .orderArea{
-	@include mobile-xs{
-		padding: 50px 0 0 0;
-	}
-	@include tablet{
-		padding: 100px 0 0 0;
-	}
+  @include mobile-xs{
+    padding: 50px 0 0 0;
+  }
+  @include tablet{
+    padding: 100px 0 0 0;
+  }
 }
 .cartInfo{
-	border-radius: 0;
-	border-color: #dedede;
-	border: none;
-	.panel-heading{
-		border-radius: 0;
-		height: 56px;
-		padding: 0 30px;
-		line-height: 56px;
-		font-weight: 400;
-		text-transform: uppercase;
-		font-family: 'Montserrat', sans-serif;
-		color: $title-color;
-		letter-spacing: 1px;
-		border-bottom: none;
-		@include mobile-xs{
-  		font-size: 14px;
-  	}
-  	@include tablet{
-  		font-size: 20px;
-  	}
-  	span{
-  		color: $primary-color;
-  		font-weight: 700;
-  		font-family: 'Open Sans', sans-serif;
-  		font-size: 24px;
-  	}
-	}
-	.panel-body{
-		padding: 20px;
-		border: 1px solid #dedede;
-		border-top: none;
-		&.tableArea{
-			padding: 0;
-		}
-	}
-	table{
-		margin: 0;
-		tr{
-			td{
-				border-top: none;
-				border-bottom: 1px solid $border-color;
-				font-family: 'Montserrat', sans-serif;
-				line-height: 26px;
-				color: $black-color;
-				@include mobile-xs{
-					font-size: 14px;
-					padding: 5px;
-				}
-				@include tablet{
-					font-size: 18px;
-					padding: 20px;
-				}
-				a{
-					font-family: 'Montserrat', sans-serif;
-					line-height: 26px;
-					color: $black-color;
-					@include mobile-xs{
-						font-size: 14px;
-					}
-					@include tablet{
-						font-size: 18px;
-					}
-				}
-				span{
-					color: $text-color;
-					font-size: 13px;
-					line-height: 24px;
-					font-family: 'Open Sans', sans-serif;
-				}
-				.price{
-					color: $primary-color;
-					font-size: 18px;
-					line-height: 24px;
-					font-family: 'Open Sans', sans-serif;
-					font-weight: 600;
-				}
-				.close{
-					opacity: 1;
-					span{
-						font-size: 50px;
-						font-weight: 400;
-						font-family: 'Open Sans', sans-serif;
-						color: $text-color;
-					}
-				}
-				&:first-child{
-					@include mobile-xs{
-						width: auto;
-					}
-					@include tablet{
-						width: 155px;
-					}
-				}
-				&:last-child{
-					text-align: right;
-				}
-			}
-			&:last-child{
-				td{
-					border: none;
-				}
-			}
-		}
-	}
-	p{
-		color: $title-color;
-		margin-bottom: 18px;
-	}
-	.input-group{
-		width: 100%;
-		margin-bottom: 20px;
-	}
-	.form-control, .input-group-addon{
+  border-radius: 0;
+  border-color: #dedede;
+  border: none;
+  .panel-heading{
+    border-radius: 0;
+    height: 56px;
+    padding: 0 30px;
+    line-height: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: $title-color;
+    letter-spacing: 1px;
+    border-bottom: none;
+    @include mobile-xs{
+      font-size: 14px;
+    }
+    @include tablet{
+      font-size: 20px;
+    }
+    span{
+      color: $primary-color;
+      font-weight: 700;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 24px;
+    }
+  }
+  .panel-body{
+    padding: 20px;
+    border: 1px solid #dedede;
+    border-top: none;
+    &.tableArea{
+      padding: 0;
+    }
+  }
+  table{
+    margin: 0;
+    tr{
+      td{
+        border-top: none;
+        border-bottom: 1px solid $border-color;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 26px;
+        color: $black-color;
+        @include mobile-xs{
+          font-size: 14px;
+          padding: 5px;
+        }
+        @include tablet{
+          font-size: 18px;
+          padding: 20px;
+        }
+        a{
+          font-family: 'Montserrat', sans-serif;
+          line-height: 26px;
+          color: $black-color;
+          @include mobile-xs{
+            font-size: 14px;
+          }
+          @include tablet{
+            font-size: 18px;
+          }
+        }
+        span{
+          color: $text-color;
+          font-size: 13px;
+          line-height: 24px;
+          font-family: 'Open Sans', sans-serif;
+        }
+        .price{
+          color: $primary-color;
+          font-size: 18px;
+          line-height: 24px;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 600;
+        }
+        .close{
+          opacity: 1;
+          span{
+            font-size: 50px;
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;
+            color: $text-color;
+          }
+        }
+        &:first-child{
+          @include mobile-xs{
+            width: auto;
+          }
+          @include tablet{
+            width: 155px;
+          }
+        }
+        &:last-child{
+          text-align: right;
+        }
+      }
+      &:last-child{
+        td{
+          border: none;
+        }
+      }
+    }
+  }
+  p{
+    color: $title-color;
+    margin-bottom: 18px;
+  }
+  .input-group{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .form-control, .input-group-addon{
     border-radius: 0;
     height: 40px;
     box-shadow: none;
-		color: $text-color;
-		background-color: $white-color;
-		border: 1px solid $border-color;
-		margin: 0 5% 0 0;
-		@include mobile-xs{
-			font-size: 14px;
-			width: 65%;
-		}
-		@include tablet{
-			font-size: 12px;
-			width: 50%;
-		}
-		@include desktops{
-			font-size: 14px;
-			width: 65%;
-		}
-	}
-	.form-control:focus{
-		border: 1px solid $primary-color;
-	}
-	.input-group-addon{
-		
-		background-color: transparent;
-		color: $title-color;
-		font-weight: 700;
-		text-transform: uppercase;
-		border: 1px solid $primary-color;
-		margin: 0;
-		@include mobile-xs{
-			width: 30%;
-		}
-		@include tablet{
-			width: 45%;
-		}
-		@include desktops{
-			width: 30%;
-		}
-	}
+    color: $text-color;
+    background-color: $white-color;
+    border: 1px solid $border-color;
+    margin: 0 5% 0 0;
+    @include mobile-xs{
+      font-size: 14px;
+      width: 65%;
+    }
+    @include tablet{
+      font-size: 12px;
+      width: 50%;
+    }
+    @include desktops{
+      font-size: 14px;
+      width: 65%;
+    }
+  }
+  .form-control:focus{
+    border: 1px solid $primary-color;
+  }
+  .input-group-addon{
+    
+    background-color: transparent;
+    color: $title-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid $primary-color;
+    margin: 0;
+    @include mobile-xs{
+      width: 30%;
+    }
+    @include tablet{
+      width: 45%;
+    }
+    @include desktops{
+      width: 30%;
+    }
+  }
 }
 .cartImage{
-	height: 105px;
-	border: 1px solid $border-color;
-	text-align: center;
-	line-height: 105px;
-	display: block;
-	@include mobile-xs{
-		width: 105px;
-	}
-	@include tablet{
-		width: 130px;
-	}
+  height: 105px;
+  border: 1px solid $border-color;
+  text-align: center;
+  line-height: 105px;
+  display: block;
+  @include mobile-xs{
+    width: 105px;
+  }
+  @include tablet{
+    width: 130px;
+  }
 }
 
 /*=== 8.2 CHECK OUT ===*/
 .checkout{
-	@include mobile-xs{
-		padding: 50px 0;
-	}
-	@include tablet{
-		padding: 100px 0;
-	}
+  @include mobile-xs{
+    padding: 50px 0;
+  }
+  @include tablet{
+    padding: 100px 0;
+  }
 }
 .checkInfo{
-	border-radius: 0;
-	border-color: #dedede;
-	border: none;
-	margin-bottom: 80px;
-	.panel-heading{
-		border-radius: 0;
-		height: 56px;
-		padding: 0 30px;
-		line-height: 56px;
-		font-weight: 400;
-		text-transform: uppercase;
-		font-family: 'Montserrat', sans-serif;
-		color: $title-color;
-		letter-spacing: 1px;
-		border-bottom: none;
-		@include mobile-xs{
-  		font-size: 14px;
-  	}
-  	@include tablet{
-  		font-size: 20px;
-  	}
-	}
-	.panel-body{
-		padding: 20px;
-		border: 1px solid #dedede;
-		border-top: none;
-	}
+  border-radius: 0;
+  border-color: #dedede;
+  border: none;
+  margin-bottom: 80px;
+  .panel-heading{
+    border-radius: 0;
+    height: 56px;
+    padding: 0 30px;
+    line-height: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: $title-color;
+    letter-spacing: 1px;
+    border-bottom: none;
+    @include mobile-xs{
+      font-size: 14px;
+    }
+    @include tablet{
+      font-size: 20px;
+    }
+  }
+  .panel-body{
+    padding: 20px;
+    border: 1px solid #dedede;
+    border-top: none;
+  }
 }
 .cardTitle{
-	color: $black-color;
-	margin-bottom: 20px;
-	@include mobile-xs{
-		padding-left: 0;
-	}
-	@include tablet{
-		padding-left: 0;
-	}
-	i.fa{
-		color: $primary-color;
-		margin-right: 10px;
-	}
-	&.extraSpace{
-		@include mobile-xs{
-			padding-left: 0;
-		}
-		@include tablet{
-			padding-left: 20px;
-		}
-	}
+  color: $black-color;
+  margin-bottom: 20px;
+  @include mobile-xs{
+    padding-left: 0;
+  }
+  @include tablet{
+    padding-left: 0;
+  }
+  i.fa{
+    color: $primary-color;
+    margin-right: 10px;
+  }
+  &.extraSpace{
+    @include mobile-xs{
+      padding-left: 0;
+    }
+    @include tablet{
+      padding-left: 20px;
+    }
+  }
 }
 .form-group{
-	.cardTitle{
-		padding-left: 0;
-		i.fa{
-			color: $text-color;
-			margin-right: 10px;
-		}
-	}
+  .cardTitle{
+    padding-left: 0;
+    i.fa{
+      color: $text-color;
+      margin-right: 10px;
+    }
+  }
 }
 .commentsForm{
-	@include mobile-xs{
-		padding: 0 0 20px 0;
+  @include mobile-xs{
+    padding: 0 0 20px 0;
     border-bottom: 1px dashed #b7b7b7;
-		margin: 0 0 20px 0;
-	}
-	@include tablet{
-		padding: 0;
-		margin: 0;
-		border: none;
-	}
+    margin: 0 0 20px 0;
+  }
+  @include tablet{
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
 }
 .form-group{
-	position: relative;
-	.helpText{
-		position: absolute;
-		top: 14px;
-		right: 25px;
-	}
-	.dateSelect, .countrySelect{
-		margin-bottom: 0;
-	}
+  position: relative;
+  .helpText{
+    position: absolute;
+    top: 14px;
+    right: 25px;
+  }
+  .dateSelect, .countrySelect{
+    margin-bottom: 0;
+  }
 }
 .paymentPart{
-	border: 1px solid $border-color;
-	padding: 10px 20px;
-	.form-group{
-		margin-bottom: 0;
-	}
-	.btn-primary{
-		@include mobile-xs{
-			width: 100%;
-			padding-left: 25px;
-			padding-right: 25px;
-			margin-bottom: 10px;
-		}
-		@include tablet{
-			width: auto;
-			padding-left: 25px;
-			padding-right: 25px;
-			margin-bottom: 0;
-		}
-	}
+  border: 1px solid $border-color;
+  padding: 10px 20px;
+  .form-group{
+    margin-bottom: 0;
+  }
+  .btn-primary{
+    @include mobile-xs{
+      width: 100%;
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-bottom: 10px;
+    }
+    @include tablet{
+      width: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-bottom: 0;
+    }
+  }
 }
 .totalAmount{
-	@include mobile-xs{
-		float: none;
-		display: block;
-		text-align: center;
-	}
-	@include tablet{
-		float: right;
-		display: inline-block;
-	}
-	span, strong{
-		line-height: 45px;
-		font-size: 20px;
-		color: $black-color;
-	}
-	strong{
-		color: $primary-color;
-		font-size: 20px;
-		margin-left: 10px;
-	}
+  @include mobile-xs{
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  @include tablet{
+    float: right;
+    display: inline-block;
+  }
+  span, strong{
+    line-height: 45px;
+    font-size: 20px;
+    color: $black-color;
+  }
+  strong{
+    color: $primary-color;
+    font-size: 20px;
+    margin-left: 10px;
+  }
 }
 .chooseOption{
-	width: 100%;
-	padding-left: 40px;
-	input[type=radio]{
-		outline: 0;
-	}
+  width: 100%;
+  padding-left: 40px;
+  input[type=radio]{
+    outline: 0;
+  }
 }

@@ -1,29 +1,29 @@
 /*=== 2. UI KIT ===*/
 /*=== 2.1 BUTTON ===*/
 .btn{
-	font-family: 'Open Sans', sans-serif;
-	line-height: 15px;
-	padding:12px 0;
-	color: $white-color;
-	font-weight: 700;
-	border:none;
-	text-transform: uppercase;
-	background-color:transparent;
-	border-radius:0;
-	letter-spacing: 1px;
-	@include tablet{
-		padding:13px 0;
-		font-size: 12px;
-	}
-	@include desktops{
-		padding:15px 0;
-		font-size: 14px;
-	}
-	&:focus, &.active, &:active, &:hover{
-		border: none;
-		outline: 0;
-		color: $white-color;
-	}
+  font-family: 'Open Sans', sans-serif;
+  line-height: 15px;
+  padding:12px 0;
+  color: $white-color;
+  font-weight: 700;
+  border:none;
+  text-transform: uppercase;
+  background-color:transparent;
+  border-radius:0;
+  letter-spacing: 1px;
+  @include tablet{
+    padding:13px 0;
+    font-size: 12px;
+  }
+  @include desktops{
+    padding:15px 0;
+    font-size: 14px;
+  }
+  &:focus, &.active, &:active, &:hover{
+    border: none;
+    outline: 0;
+    color: $white-color;
+  }
 }
 .waves-button, .waves-button:hover, 
 .waves-button:visited, .waves-button-input{
@@ -31,54 +31,54 @@
     line-height: 11px;
     color: $white-color;
     @include tablet{
-		font-size: 12px;
-	}
+    font-size: 12px;
+  }
 }
 .btn-primary{
-	background-color: $primary-color;
-	@include transition(all 0.3s ease-in-out);
-	>i{
-		margin-right: 10px;
-	}
-	&:hover{
-		background-color: $primary-color;
-	}
-	&:focus, &.active, &:active{
-		background-color: $primary-color;
-	}
-	&.btn-Full{
-		float: left;
-		width: 100%;
-	}
+  background-color: $primary-color;
+  @include transition(all 0.3s ease-in-out);
+  >i{
+    margin-right: 10px;
+  }
+  &:hover{
+    background-color: $primary-color;
+  }
+  &:focus, &.active, &:active{
+    background-color: $primary-color;
+  }
+  &.btn-Full{
+    float: left;
+    width: 100%;
+  }
 }
 .btn-secondary{
-	@include transition(all 0.3s ease-in-out);
-	background-color: $secondary-color;
-	>i{
-		margin-right: 10px;
-	}
-	&:hover{
-		background-color: $primary-color;
-	}
-	&:focus, &.active, &:active{
-		background-color: $primary-color;
-	}
+  @include transition(all 0.3s ease-in-out);
+  background-color: $secondary-color;
+  >i{
+    margin-right: 10px;
+  }
+  &:hover{
+    background-color: $primary-color;
+  }
+  &:focus, &.active, &:active{
+    background-color: $primary-color;
+  }
 }
 .btn-border{
-	border: 2px solid $white-color;
-	padding:10px 0;
-	@include tablet{
-		padding:11px 0;
-	}
-	@include desktops{
-		padding:13px 0;
-	}
-	&:hover,&:focus{
-		border: 2px solid $white-color;
-	}
-	>i{
-		margin-right: 10px;
-	}
+  border: 2px solid $white-color;
+  padding:10px 0;
+  @include tablet{
+    padding:11px 0;
+  }
+  @include desktops{
+    padding:13px 0;
+  }
+  &:hover,&:focus{
+    border: 2px solid $white-color;
+  }
+  >i{
+    margin-right: 10px;
+  }
 }
 .btn-primary.active.focus, 
 .btn-primary.active:focus, 
@@ -89,215 +89,215 @@
 .open>.dropdown-toggle.btn-primary.focus, 
 .open>.dropdown-toggle.btn-primary:focus, 
 .open>.dropdown-toggle.btn-primary:hover{
-	border: none;
-	background-color: $primary-color;
-	outline: 0;
+  border: none;
+  background-color: $primary-color;
+  outline: 0;
 }
 .empty{
-	text-indent:-999px;
+  text-indent:-999px;
 }
 .backToTop{
-	position: absolute;
-	left: 50%;
-	// margin-left: -50px;
-	top: -25px;
-	width: 50px;
-	height: 50px;
-	text-align: center;
-	background-color: $primary-color;
-	@include border-radius(100%);
-	display: block;
-	@include opacity(0);
-	@include transition(all 0.3s ease-in-out);
-	-moz-transform: translate(-50%, 0);
-	-o-transform: translate(-50%, 0);
-	-ms-transform: translate(-50%, 0);
-	-webkit-transform: translate(-50%, 0);
-	transform: translate(-50%, 0);
-	i{
-		font-size: 35px;
-		font-weight: bold;
-		line-height: 45px;
-		color: $white-color;
-	}
-	&:hover{
-		i{
-			color: $white-color;
-		}
-	}
+  position: absolute;
+  left: 50%;
+  // margin-left: -50px;
+  top: -25px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: $primary-color;
+  @include border-radius(100%);
+  display: block;
+  @include opacity(0);
+  @include transition(all 0.3s ease-in-out);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  i{
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 45px;
+    color: $white-color;
+  }
+  &:hover{
+    i{
+      color: $white-color;
+    }
+  }
 }
 
 .buttonPart{
-	border-bottom: 1px solid $border-color;
-	@include mobile-xs{
-		padding: 0 0 20px 0;
-	}
-	@include tablet{
-		padding: 0 0 70px 0;
-	}
-	
+  border-bottom: 1px solid $border-color;
+  @include mobile-xs{
+    padding: 0 0 20px 0;
+  }
+  @include tablet{
+    padding: 0 0 70px 0;
+  }
+  
 }
 .squareBtn, .fullRoundBtn, .roundBtn{
-	margin: 0 0 30px 0;
-	text-align: center;
+  margin: 0 0 30px 0;
+  text-align: center;
 }
 .btn-common{
-	color: $title-color;
-	border: 1px solid $border-color;
-	padding: 14px 38px;
-	background-color: transparent;
-	border-radius: 0;
+  color: $title-color;
+  border: 1px solid $border-color;
+  padding: 14px 38px;
+  background-color: transparent;
+  border-radius: 0;
   letter-spacing: 1px;
   &:focus, &.active, &:active, &:hover{
-		color: $title-color;
-		border: 1px solid $border-color;
-	}
-	@include mobile-xs{
-		margin: 0 auto 20px auto;
-		padding: 14px 38px;
-		font-size: 14px;
-	}
-	@include tablet{
-		margin: 0;
-		padding: 14px;
-		font-size: 9px;
-	}
-	@include desktops{
-		padding: 14px 38px;
-		font-size: 14px;
-	}
+    color: $title-color;
+    border: 1px solid $border-color;
+  }
+  @include mobile-xs{
+    margin: 0 auto 20px auto;
+    padding: 14px 38px;
+    font-size: 14px;
+  }
+  @include tablet{
+    margin: 0;
+    padding: 14px;
+    font-size: 9px;
+  }
+  @include desktops{
+    padding: 14px 38px;
+    font-size: 14px;
+  }
 }
 .btn-theme{
-	background-color: $primary-color;
-	border-color: $primary-color;
-	color: $white-color;
-	&:focus, &.active, &:active, &:hover{
-		background-color: $primary-color;
-		border-color: $primary-color;
-		color: $white-color;
-	}
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: $white-color;
+  &:focus, &.active, &:active, &:hover{
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $white-color;
+  }
 }
 .btn-gray{
-	background-color: #f5f5f5;
-	&:focus, &.active, &:active, &:hover{
-		background-color: #f5f5f5;
-	}
+  background-color: #f5f5f5;
+  &:focus, &.active, &:active, &:hover{
+    background-color: #f5f5f5;
+  }
 }
 .btn-dark{
-	background-color: #444548;
-	border-color: #444548;
-	color: $white-color;
-	&:focus, &.active, &:active, &:hover{
-		background-color: #444548;
-		border-color: #444548;
-		color: $white-color;
-	}
+  background-color: #444548;
+  border-color: #444548;
+  color: $white-color;
+  &:focus, &.active, &:active, &:hover{
+    background-color: #444548;
+    border-color: #444548;
+    color: $white-color;
+  }
 }
 .btn-full-round{
-	border-radius: 25px;
+  border-radius: 25px;
 }
 .btn-round{
-	border-radius: 4px;
+  border-radius: 4px;
 }
 /*=== 2.2 SECTION ===*/
 .tabSection{
-	background-color: $white-color;
-	hr{
+  background-color: $white-color;
+  hr{
     border-color: $border-color;
     @include mobile-xs{
-    	margin: 0 0 50px 0;
+      margin: 0 0 50px 0;
     }
     @include tablet{
-    	margin: 0 0 100px 0;
+      margin: 0 0 100px 0;
     }
-	}
-	@include mobile-xs{
-		padding: 50px 15px 0 15px;
-	}
-	@include tablet{
-		padding: 100px 15px 0 15px;
-	}
+  }
+  @include mobile-xs{
+    padding: 50px 15px 0 15px;
+  }
+  @include tablet{
+    padding: 100px 15px 0 15px;
+  }
 }
 .uiTitle{
-	h2{
-	  letter-spacing: 2px;
-	  margin: 0 0 25px 0;
-	}
+  h2{
+    letter-spacing: 2px;
+    margin: 0 0 25px 0;
+  }
 }
 .paginationSection{
-	padding: 0 0 70px 0;
-	@include mobile-xs{
-		padding: 0 15px 50px 15px;
-	}
-	@include tablet{
-		padding: 0 15px 70px 15px;
-	}
+  padding: 0 0 70px 0;
+  @include mobile-xs{
+    padding: 0 15px 50px 15px;
+  }
+  @include tablet{
+    padding: 0 15px 70px 15px;
+  }
 }
 .formArea{
-	@include mobile-xs{
-		padding: 50px 0;
-	}
-	@include tablet{
-		padding: 100px 0;
-	}
+  @include mobile-xs{
+    padding: 50px 0;
+  }
+  @include tablet{
+    padding: 100px 0;
+  }
 }
 .pageTitleArea{
-	width: 100%;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-position: center top;
-	padding-bottom:0;
-	position: relative;
-	padding: 105px 0;
-	background-repeat: no-repeat;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+  padding-bottom:0;
+  position: relative;
+  padding: 105px 0;
+  background-repeat: no-repeat;
 }
 .pageTitle{
-	h1{
-		margin: 0;
-		text-align: center;
-		font-size: 55px;
-		line-height: 60px;
-		color: $white-color;
-		text-transform: uppercase;
-		font-family: 'Raleway';		
-	}
+  h1{
+    margin: 0;
+    text-align: center;
+    font-size: 55px;
+    line-height: 60px;
+    color: $white-color;
+    text-transform: uppercase;
+    font-family: 'Raleway';   
+  }
 }
 /*=== 2.3 FORM ===*/
 .form-group{
-	margin-bottom: 20px;
-	button{
-		width: 172px;
-	}
+  margin-bottom: 20px;
+  button{
+    width: 172px;
+  }
 }
 .form-control{
-	height: 43px;
-	box-shadow: none;
-	border-radius: 0;
-	padding-left: 18px;
-	border-color: $border-color;
-	color: $text-color;
-	&:focus{
-		border-color: $border-color;
-	}
+  height: 43px;
+  box-shadow: none;
+  border-radius: 0;
+  padding-left: 18px;
+  border-color: $border-color;
+  color: $text-color;
+  &:focus{
+    border-color: $border-color;
+  }
 }
 .dateSelect{
-	margin-bottom: 20px;
-	.form-control{
-		border-right: none;
-	}
-	.input-group-addon{
-		background-color: transparent;
-		border-color: $border-color;
-		border-radius: 0;
-	}
+  margin-bottom: 20px;
+  .form-control{
+    border-right: none;
+  }
+  .input-group-addon{
+    background-color: transparent;
+    border-color: $border-color;
+    border-radius: 0;
+  }
 }
 
 textarea{
-	&.form-control{
-		height: 150px;
-	}
+  &.form-control{
+    height: 150px;
+  }
 }
 
 .formPart{
@@ -305,451 +305,451 @@ textarea{
   border-color: $border-color;
   border: none;
   .panel-heading{
-  	border-radius: 0;
-  	height: 56px;
-  	padding: 0 30px;
-  	line-height: 56px;
-  	font-weight: 400;
-  	text-transform: uppercase;
-  	font-family: 'Montserrat', sans-serif;
-  	color: $title-color;
-  	letter-spacing: 1px;
-  	border-bottom: none;
-  	@include mobile-xs{
-  		font-size: 14px;
-  	}
-  	@include tablet{
-  		font-size: 20px;
-  	}
-  	span{
-  		font-weight: 700;
-  	}
+    border-radius: 0;
+    height: 56px;
+    padding: 0 30px;
+    line-height: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: $title-color;
+    letter-spacing: 1px;
+    border-bottom: none;
+    @include mobile-xs{
+      font-size: 14px;
+    }
+    @include tablet{
+      font-size: 20px;
+    }
+    span{
+      font-weight: 700;
+    }
   }
   .panel-body{
-  	padding: 30px;
-  	border: 1px solid $border-color;
-  	border-top: none;
+    padding: 30px;
+    border: 1px solid $border-color;
+    border-top: none;
   }
   .form-group{
-  	position: relative;
+    position: relative;
   }
   .form-control{
-  	padding-left: 38px;
+    padding-left: 38px;
   }
   i.fa{
-  	position: absolute;
-  	left: 0;
-  	top: 0;
-  	width: 38px;
-  	height: 100%;
-  	text-align: center;
-  	line-height: 44px;
-  	color: $text-color;
-  	color: #999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 100%;
+    text-align: center;
+    line-height: 44px;
+    color: $text-color;
+    color: #999;
   }
   .checkbox{
-  	margin: 0 0 20px 0;
-  	label{
-  		font-size: 13px;
-  		color: $black-color;
-  	}
+    margin: 0 0 20px 0;
+    label{
+      font-size: 13px;
+      color: $black-color;
+    }
   }
 }
 /*=== 2.4 PAGINATION ===*/
 .paginationCommon{
-	nav{
-		border-top: 1px solid $border-color;
-		@include mobile-xs{
-			margin: 0 0 20px 0;
-		}
-		@include tablet{
-			margin: 0 0 70px 0;
-		}
-	}
-	.pagination{
-		margin: 30px 0;
-		li{
-			float: left;
-			margin-right: 5px;
-			a{
-				border-color: $border-color;
-				float: none;
-				font-size: 15px;
-				color: $text-color;
-				font-weight: 700;
-				width: 50px;
-				height: 50px;
-				padding: 0;
-				line-height: 50px;
-				display: block;
-				text-align: center;
-				&:hover {
-					color: $white-color;
-					background-color: $primary-color;
-					border-color: $primary-color;
-				}
-				&:focus{
-					background-color: $white-color;
-					border-color: $border-color;
-					color: $text-color;
-				}
-			}
-			&.active{
-				a, a:focus, a:hover{
-					color: $white-color;
-					background-color: $primary-color;
-					border-color: $primary-color;
-				}
-			}
-			&:first-child{
-				a{
-					border-radius: 0;
-				}
-			}
-			&:last-child{
-				a{
-					border-radius: 0;
-				}
-			}
-		}
-	}
-	&.paginationTwo{
-		.pagination{
-			li{
-				margin-right: 0;
-				a{
-					float: none;
-					display: inline-block;
-				}
-				&:first-child{
-					a{
-						border-radius: 25px 0 0 25px;
-					}
-				}
-				&:last-child{
-					a{
-						border-radius: 0 25px 25px 0;
-					}
-				}
-			}
-		}
-	}
-	&.paginationThree{
-		.pagination{
-			li{
-				a{
-					border-radius: 100%;
-				}
-			}
-		}
-	}
+  nav{
+    border-top: 1px solid $border-color;
+    @include mobile-xs{
+      margin: 0 0 20px 0;
+    }
+    @include tablet{
+      margin: 0 0 70px 0;
+    }
+  }
+  .pagination{
+    margin: 30px 0;
+    li{
+      float: left;
+      margin-right: 5px;
+      a{
+        border-color: $border-color;
+        float: none;
+        font-size: 15px;
+        color: $text-color;
+        font-weight: 700;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        line-height: 50px;
+        display: block;
+        text-align: center;
+        &:hover {
+          color: $white-color;
+          background-color: $primary-color;
+          border-color: $primary-color;
+        }
+        &:focus{
+          background-color: $white-color;
+          border-color: $border-color;
+          color: $text-color;
+        }
+      }
+      &.active{
+        a, a:focus, a:hover{
+          color: $white-color;
+          background-color: $primary-color;
+          border-color: $primary-color;
+        }
+      }
+      &:first-child{
+        a{
+          border-radius: 0;
+        }
+      }
+      &:last-child{
+        a{
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  &.paginationTwo{
+    .pagination{
+      li{
+        margin-right: 0;
+        a{
+          float: none;
+          display: inline-block;
+        }
+        &:first-child{
+          a{
+            border-radius: 25px 0 0 25px;
+          }
+        }
+        &:last-child{
+          a{
+            border-radius: 0 25px 25px 0;
+          }
+        }
+      }
+    }
+  }
+  &.paginationThree{
+    .pagination{
+      li{
+        a{
+          border-radius: 100%;
+        }
+      }
+    }
+  }
 }
 /*=== 2.5 ACCORDION ===*/
 .accordionCommon{
-	.panel{
-		margin-bottom: 30px;
-		border: none;
-	}
-	.panel-heading{
-		display: block;
-		padding: 15px 20px;
-		@include border-radius(8px);
-		font-weight: 600;
-		color: $white-color;
-		font-size: 14px;
-		text-transform: uppercase;
-		position: relative;
-		span.iconBlock{
-			width: 20px;
-			height: 20px;
-			line-height: 20px;
-			text-align: center;
-			@include border-radius(3px);
-			background-color: $white-color;
-			color: $white-color;
-			display: inline-block;
-			float: right;
-			@include box-shadow(0, 4px, 0, rgba($black-color, .1) );
-			&.iconTransparent{
-				background-color: transparent;
-				box-shadow: none;
-				color: $white-color;
-			}
-		}
-	}
-	span.separator{
-		width: 1px;
-		height: 100%;
-		background-color: rgba($white-color, .25);
-		position: absolute;
-		top: 0;
-		right: 60px;
-	}
-	.panel-body{
-		padding: 30px;
-		background-color: $white-color;
-		@include box-shadow(0, 4px, 0, rgba($black-color, .1) );
-		@include border-radius( 0 0 8px 8px);
-		p{
-			margin-bottom: 35px;
-			&:last-child{
-				margin-bottom: 0;
-			}
-		}
-	}
+  .panel{
+    margin-bottom: 30px;
+    border: none;
+  }
+  .panel-heading{
+    display: block;
+    padding: 15px 20px;
+    @include border-radius(8px);
+    font-weight: 600;
+    color: $white-color;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    span.iconBlock{
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      @include border-radius(3px);
+      background-color: $white-color;
+      color: $white-color;
+      display: inline-block;
+      float: right;
+      @include box-shadow(0, 4px, 0, rgba($black-color, .1) );
+      &.iconTransparent{
+        background-color: transparent;
+        box-shadow: none;
+        color: $white-color;
+      }
+    }
+  }
+  span.separator{
+    width: 1px;
+    height: 100%;
+    background-color: rgba($white-color, .25);
+    position: absolute;
+    top: 0;
+    right: 60px;
+  }
+  .panel-body{
+    padding: 30px;
+    background-color: $white-color;
+    @include box-shadow(0, 4px, 0, rgba($black-color, .1) );
+    @include border-radius( 0 0 8px 8px);
+    p{
+      margin-bottom: 35px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 /*=== 2.6 TABS ===*/
 .tabCommon{
   @include mobile-xs{
-  	margin: 0 0 50px 0;
+    margin: 0 0 50px 0;
   }
   @include tablet{
-  	margin: 0 0 100px 0;
+    margin: 0 0 100px 0;
   }
   .nav-tabs{
-  	li{
-  		a{
-  			border-color: $border-color;
-  			border-radius: 0;
-  			background-color: #f7f7f7;
-  			margin-right: 5px;
-  			color: $title-color;
-  			text-transform: uppercase;
-  			font-family: 'Montserrat', sans-serif;
-  			font-weight: 400;
-  			text-align: center;
-  			&:hover{
-  				background-color: $white-color;
-  				border-bottom-color: $white-color;
-  			}
-  			@include mobile-xs{
-  				width: auto;
-  				padding: 12px 12px;
-  				font-size: 12px;
-  			}
-  			@include tablet{
-  				width: 131px;
-  				padding: 12px 0;
-  				font-size: 14px;
-  			}
-  		}
-  		&.active{
-  			a{
-  				background-color: $white-color;
-  				border-bottom-color: $white-color;
-  			}
-  		}
-  	}
+    li{
+      a{
+        border-color: $border-color;
+        border-radius: 0;
+        background-color: #f7f7f7;
+        margin-right: 5px;
+        color: $title-color;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        text-align: center;
+        &:hover{
+          background-color: $white-color;
+          border-bottom-color: $white-color;
+        }
+        @include mobile-xs{
+          width: auto;
+          padding: 12px 12px;
+          font-size: 12px;
+        }
+        @include tablet{
+          width: 131px;
+          padding: 12px 0;
+          font-size: 14px;
+        }
+      }
+      &.active{
+        a{
+          background-color: $white-color;
+          border-bottom-color: $white-color;
+        }
+      }
+    }
   }
   .tab-content{
-  	padding: 30px;
-  	border: 1px solid $border-color;
-  	border-top: none;
+    padding: 30px;
+    border: 1px solid $border-color;
+    border-top: none;
   }
   .tab-pane{
-  	h3{
-  		font-weight: 400;
-  		margin: 0 0 10px 0;
-  		font-size: 14px;
-  	}
-  	p{
-  		margin: 0;
-  	}
+    h3{
+      font-weight: 400;
+      margin: 0 0 10px 0;
+      font-size: 14px;
+    }
+    p{
+      margin: 0;
+    }
   }
   &.tabTwo{
-  	.nav-tabs{
-  		li{
-  			a{
-  				border-radius: 4px 4px 0 0;
-  				margin: 0 -1px 0 0;
-  			}
-  		}
-  	}
+    .nav-tabs{
+      li{
+        a{
+          border-radius: 4px 4px 0 0;
+          margin: 0 -1px 0 0;
+        }
+      }
+    }
   }
   &.tabThree{
-  	.nav-tabs{
-  		li{
-  			a{
-  				height: 45px;
-					line-height: 45px;
-					position: relative;
-					@include mobile-xs{
-						padding: 0 12px;
-					}
-					@include tablet{
-						padding: 0;
-					}					
-					&:before{
-						content: "";
-						background-color: $primary-color;
-						height: 3px;
-						transform: scale(0);
-						position: absolute;
-						width: 100%;
-						left: 0px;
-						top: 0px;
-						transition: all 200ms ease 0s;
-					}
-  			}
-  			&.active{
-  				a{
-  					&:before{
-  						transform: scale(1);
-  					}
-  				}
-  			}
-  		}
-  	}
+    .nav-tabs{
+      li{
+        a{
+          height: 45px;
+          line-height: 45px;
+          position: relative;
+          @include mobile-xs{
+            padding: 0 12px;
+          }
+          @include tablet{
+            padding: 0;
+          }         
+          &:before{
+            content: "";
+            background-color: $primary-color;
+            height: 3px;
+            transform: scale(0);
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top: 0px;
+            transition: all 200ms ease 0s;
+          }
+        }
+        &.active{
+          a{
+            &:before{
+              transform: scale(1);
+            }
+          }
+        }
+      }
+    }
   }
-	&.singleTab{
-		.nav-tabs{
-			border-bottom: none;
-			margin-bottom: 20px;
-			li{
-				a{
-					background-color: $white-color;
-					margin-right: 10px;
-					&:hover{
-						background-color: $primary-color;
-						border: 1px solid $primary-color;
-						color: $white-color;
-					}
-				}
-				&.active{
-					a{
-						background-color: $primary-color;
-						border: 1px solid $primary-color;
-						color: $white-color;
-					}
-				}
-			}
-		}
-		.tab-content{
-			border: none;
-			padding: 40px;
-		}
-		.tab-pane{
-			h4{
-				font-size: 24px;
-				color: $primary-color;
-				margin: 0 0 20px 0;
-				font-weight: 400;
-			}
-			p{
-				line-height: 26px;
-				margin: 0 0 25px 0;
-			}
-			.list-inline{
-				overflow: hidden;
-				@include mobile-xs{
-					width: 100%
-				}
-				@include desktops{
-					width: 50%
-				}
-				li{
-					float: left;
-					@include mobile-xs{
-						width: 100%
-					}
-					@include tablet{
-						width: 50%
-					}
-					i.fa{
-						margin-right: 10px;
-					}
-				}
-			}
-			.blogCommnets{
-				margin: 0;
-				h3{
-					font-size: 24px;
-					margin-bottom: 35px;
-					letter-spacing: 1px;
-				}
-				.media{
-					padding-bottom: 15px;
-					border-bottom: 1px dashed #b7b7b7;
-					@include mobile-xs{
-						margin-top: 15px;
-					}
-					@include tablet{
-						margin-top: 30px;
-					}
-				}
-				.media>.pull-left{
-					@include mobile-xs{
-						padding: 0 0 20px 0;
-					}
-					@include tablet{
-						padding: 0 20px 0 0;
-					}
-				}
-				.media-body{
-					h4{
-						font-weight: 400;
-						text-transform: uppercase;
-						margin: 0 0 15px 0;
-						font-size: 18px;
-						color: $title-color;
-					}
-					h5{
-						color: $text-color;
-						font-size: 13px;
-						font-weight: 400;
-						margin-bottom: 20px;
-						i.fa{
-							color: #cdcdcd;
-							margin-right: 7px;
-						}
-					}
-					.btn-link{
-						color: $primary-color;
-						text-transform: capitalize;
-					}
-				}
-				.mediaMargin{
-					@include tablet{
-						margin-left: 50px;
-					}
-					@include tablet{
-						margin-left: 100px;
-					}
-				}
-			}
-		}
-	}
+  &.singleTab{
+    .nav-tabs{
+      border-bottom: none;
+      margin-bottom: 20px;
+      li{
+        a{
+          background-color: $white-color;
+          margin-right: 10px;
+          &:hover{
+            background-color: $primary-color;
+            border: 1px solid $primary-color;
+            color: $white-color;
+          }
+        }
+        &.active{
+          a{
+            background-color: $primary-color;
+            border: 1px solid $primary-color;
+            color: $white-color;
+          }
+        }
+      }
+    }
+    .tab-content{
+      border: none;
+      padding: 40px;
+    }
+    .tab-pane{
+      h4{
+        font-size: 24px;
+        color: $primary-color;
+        margin: 0 0 20px 0;
+        font-weight: 400;
+      }
+      p{
+        line-height: 26px;
+        margin: 0 0 25px 0;
+      }
+      .list-inline{
+        overflow: hidden;
+        @include mobile-xs{
+          width: 100%
+        }
+        @include desktops{
+          width: 50%
+        }
+        li{
+          float: left;
+          @include mobile-xs{
+            width: 100%
+          }
+          @include tablet{
+            width: 50%
+          }
+          i.fa{
+            margin-right: 10px;
+          }
+        }
+      }
+      .blogCommnets{
+        margin: 0;
+        h3{
+          font-size: 24px;
+          margin-bottom: 35px;
+          letter-spacing: 1px;
+        }
+        .media{
+          padding-bottom: 15px;
+          border-bottom: 1px dashed #b7b7b7;
+          @include mobile-xs{
+            margin-top: 15px;
+          }
+          @include tablet{
+            margin-top: 30px;
+          }
+        }
+        .media>.pull-left{
+          @include mobile-xs{
+            padding: 0 0 20px 0;
+          }
+          @include tablet{
+            padding: 0 20px 0 0;
+          }
+        }
+        .media-body{
+          h4{
+            font-weight: 400;
+            text-transform: uppercase;
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            color: $title-color;
+          }
+          h5{
+            color: $text-color;
+            font-size: 13px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            i.fa{
+              color: #cdcdcd;
+              margin-right: 7px;
+            }
+          }
+          .btn-link{
+            color: $primary-color;
+            text-transform: capitalize;
+          }
+        }
+        .mediaMargin{
+          @include tablet{
+            margin-left: 50px;
+          }
+          @include tablet{
+            margin-left: 100px;
+          }
+        }
+      }
+    }
+  }
 }
 /*=== 2.9 MODAL ===*/
 .modalCommon{
-	.modal-dialog{
-		width: 100%;
-		@include mobile-xs{
-			margin: 20px 10px 10px 0;
-		}
-		@include tablet{
-			margin: 25px 10px 10px 10px;
-		}
-	}
-	.modal-header{
-		position: relative;
-		border: none;
-		padding: 14px 15px;
-		background-color: $primary-color;
-	}
-	.modal-title{
+  .modal-dialog{
+    width: 100%;
+    @include mobile-xs{
+      margin: 20px 10px 10px 0;
+    }
+    @include tablet{
+      margin: 25px 10px 10px 10px;
+    }
+  }
+  .modal-header{
+    position: relative;
+    border: none;
+    padding: 14px 15px;
+    background-color: $primary-color;
+  }
+  .modal-title{
     letter-spacing: 1px;
     font-size: 20px;
     color: $white-color;
     text-transform: uppercase;
-	}
-	.modal-content{
-		padding: 2px 3px;
-		border-radius: 0;
-	}
-	button.close{
-		margin: 0;
+  }
+  .modal-content{
+    padding: 2px 3px;
+    border-radius: 0;
+  }
+  button.close{
+    margin: 0;
     width: 38px;
     height: 38px;
     border-radius: 100%;
@@ -761,217 +761,217 @@ textarea{
     position: absolute;
     box-shadow: 0 2px 10px rgba($black-color, .45);
     @include mobile-xs{
-    	top: -10px;
-    	right: -7px;
+      top: -10px;
+      right: -7px;
     }
     @include tablet{
-    	top: -20px;
-    	right: -20px;
+      top: -20px;
+      right: -20px;
     }
-	}
-	.modal-footer{
-		border: none;
-		text-align: left;
-	}
-	.categoryTitle{
-		h5{
-			font-size: 20px;
-			color: $title-color;
-			font-weight: 400;
-			text-transform: uppercase;
-			margin: 0;
-	    letter-spacing: 1px;
-		}
-	}
-	.modal-body{
-		padding: 50px 15px 15px 15px;
-	}
+  }
+  .modal-footer{
+    border: none;
+    text-align: left;
+  }
+  .categoryTitle{
+    h5{
+      font-size: 20px;
+      color: $title-color;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+  }
+  .modal-body{
+    padding: 50px 15px 15px 15px;
+  }
 }
 
 /*=== 2.9 MEDIA ===*/
 .media{
-	.media-left{
-		width: 100%;
-		display: block;
-		padding-right:0;
-		position:relative;
-		margin-bottom: 20px;
-		@include tablet {
-			padding-right:15px;
-			display: table-cell;
-    		vertical-align: top;
-		}
-		@include desktops {
-			padding-right:25px;
-		}
-		img{
-			display: inline-block;
-			max-width: 100%;
-			position:relative;
-			width: 100%;
-		}
-	}
-	.media-body{
-		display: block;
-		width: 100%;
-		@include tablet {
-			width: 10000px;
-			display: table-cell;
-    		vertical-align: top;
-		}
-	}
-	.media-heading {
-	    margin-bottom: 15px;
-	    @include desktops {
-			margin-bottom: 25px;
-		}
-	}
-	.list-inline{
-		margin-bottom: 20px;
-		li{
-			font-size: 13px;
-			i{
-				margin-right: 8px;
-			}
-			a{
-				color: $text-color;
-			}
-		}
-	}
-	p{
-		margin-bottom: 0;
-	}
+  .media-left{
+    width: 100%;
+    display: block;
+    padding-right:0;
+    position:relative;
+    margin-bottom: 20px;
+    @include tablet {
+      padding-right:15px;
+      display: table-cell;
+        vertical-align: top;
+    }
+    @include desktops {
+      padding-right:25px;
+    }
+    img{
+      display: inline-block;
+      max-width: 100%;
+      position:relative;
+      width: 100%;
+    }
+  }
+  .media-body{
+    display: block;
+    width: 100%;
+    @include tablet {
+      width: 10000px;
+      display: table-cell;
+        vertical-align: top;
+    }
+  }
+  .media-heading {
+      margin-bottom: 15px;
+      @include desktops {
+      margin-bottom: 25px;
+    }
+  }
+  .list-inline{
+    margin-bottom: 20px;
+    li{
+      font-size: 13px;
+      i{
+        margin-right: 8px;
+      }
+      a{
+        color: $text-color;
+      }
+    }
+  }
+  p{
+    margin-bottom: 0;
+  }
 }
 .listView{
-	margin-top:25px;
-	padding-bottom:25px;
-	&:last-child{
-		padding-bottom:0;
-	}
-	.media-left{
-	    @include tablet {
-			width: 30%;
-		}
-		@include desktops {
-			 width: 32%;
-		}
-	}
-	.media-heading {
-	    @include desktops {
-			margin-bottom: 20px;
-		}
-	}
+  margin-top:25px;
+  padding-bottom:25px;
+  &:last-child{
+    padding-bottom:0;
+  }
+  .media-left{
+      @include tablet {
+      width: 30%;
+    }
+    @include desktops {
+       width: 32%;
+    }
+  }
+  .media-heading {
+      @include desktops {
+      margin-bottom: 20px;
+    }
+  }
 }
 .common-media{
-	margin-top:50px;
-	@include desktops {
-		margin-top:100px;
-	}
-	.media-left{
-		@include tablet {
-			width: 45%;
-		}
-		@include desktops {
-			width: 35%;
-		}
-	}
+  margin-top:50px;
+  @include desktops {
+    margin-top:100px;
+  }
+  .media-left{
+    @include tablet {
+      width: 45%;
+    }
+    @include desktops {
+      width: 35%;
+    }
+  }
 }
 .sticker{
-	width:80px;
-	height:35px;
-	text-align:center;
-	display:inline-block;
-	height:35px;
-	font-size:18px;
-	font-weight:700;
-	color:$white-color;
-	background-color:$primary-color;
-	position:absolute;
-	top:0;
-	left:0;
-	@include mobile {
-		width:100px;
-		height:45px;
-		line-height:45px;
-		font-size:22px;
-	}
-	@include tablet {
-		width:80px;
-		height:35px;
-		height:35px;
-		font-size:18px;
-	}
-	@include desktops {
-		width:100px;
-		height:45px;
-		line-height:45px;
-		font-size:22px;
-	}		
+  width:80px;
+  height:35px;
+  text-align:center;
+  display:inline-block;
+  height:35px;
+  font-size:18px;
+  font-weight:700;
+  color:$white-color;
+  background-color:$primary-color;
+  position:absolute;
+  top:0;
+  left:0;
+  @include mobile {
+    width:100px;
+    height:45px;
+    line-height:45px;
+    font-size:22px;
+  }
+  @include tablet {
+    width:80px;
+    height:35px;
+    height:35px;
+    font-size:18px;
+  }
+  @include desktops {
+    width:100px;
+    height:45px;
+    line-height:45px;
+    font-size:22px;
+  }   
 }
 /*=== 2.13 PAGER ===*/
 .pagerArea{
-	>.pager{
-		margin: 80px 0 250px 0;
-		li{
-			padding: 0 15px;
-			a{
-				width: 114px;
-				height: 45px;
-				padding: 0 20px;
-				border: none;
-				line-height: 45px;
-				@include box-shadow(0, 4px, 0, rgba($black-color, .1) );
-				background-color: $primary-color;
-				@include border-radius(6px);
-				font-size: 16px;
-				text-transform: uppercase;
-				color: $white-color;
-				@include transition(all 0.3s ease-in-out);
-				font-weight: 600;
-			}
-			&:first-child{
-				a{
-					i{
-						margin-right: 10px;
-					}
-				}
-			}
-			&:last-child{
-				a{
-					i{
-						margin-left: 10px;
-					}
-				}
-			}
-		}
-	}
+  >.pager{
+    margin: 80px 0 250px 0;
+    li{
+      padding: 0 15px;
+      a{
+        width: 114px;
+        height: 45px;
+        padding: 0 20px;
+        border: none;
+        line-height: 45px;
+        @include box-shadow(0, 4px, 0, rgba($black-color, .1) );
+        background-color: $primary-color;
+        @include border-radius(6px);
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $white-color;
+        @include transition(all 0.3s ease-in-out);
+        font-weight: 600;
+      }
+      &:first-child{
+        a{
+          i{
+            margin-right: 10px;
+          }
+        }
+      }
+      &:last-child{
+        a{
+          i{
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 /*=== 2.14 ALERT ===*/
 .alertPart{
-	padding: 0 0 70px 0;
+  padding: 0 0 70px 0;
 }
 .alert-common{
-	color: $white-color;
-	font-size: 14px;
+  color: $white-color;
+  font-size: 14px;
   padding: 11px 15px;
   margin: 0 auto 30px auto;
   width: 95%;
   border: none;
   border-radius: 0;
-	span{
-		font-weight: 600;
-	}
-	&.alert-success{
-		background-color: #6fc96f;
-	}
-	&.alert-info{
-		background-color: #4da5c9;
-	}
-	&.alert-warning{
-		background-color: #e6b048;
-	}
-	&.alert-danger{
-		background-color: #e26857;
-	}
+  span{
+    font-weight: 600;
+  }
+  &.alert-success{
+    background-color: #6fc96f;
+  }
+  &.alert-info{
+    background-color: #4da5c9;
+  }
+  &.alert-warning{
+    background-color: #e6b048;
+  }
+  &.alert-danger{
+    background-color: #e26857;
+  }
 }
