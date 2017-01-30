@@ -1,0 +1,49 @@
+/*================= 6. NOT FOUND ==================*/
+.notFound{
+	background-color: $white-color;
+	text-align: center;
+	@include mobile-xs{
+		padding: 50px 15px 50px 15px;
+	}
+	@include tablet{
+		padding: 100px 15px 100px 15px;
+	}
+}
+.notFoundLogo{
+	display: inline-block;
+	@include mobile-xs{
+		margin-bottom: 40px;
+	}
+	@include tablet{
+		margin-bottom: 80px;
+	}
+}
+.notFoundImage{
+	text-align: center;	
+	@include mobile-xs{
+		margin-bottom: 40px;
+	}
+	@include tablet{
+		margin-bottom: 80px;
+	}
+	img{
+		display: inline-block;
+	}
+}
+.notFoundInfo{
+	h2{
+		font-weight: 400;
+		font-size: 20px;
+		@include mobile-xs{
+			margin-bottom: 35px;
+		}
+		@include tablet{
+			margin-bottom: 70px;
+		}
+	}
+	.btn-primary{
+		padding-left: 30px;
+		padding-right: 30px;
+		font-size: 14px;
+	}
+}

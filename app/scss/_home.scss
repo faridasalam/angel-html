@@ -1,0 +1,1201 @@
+/*================= 5. HOME ==================*/
+@import 'header';
+@import 'slider';
+@import 'footer';
+
+/*================= 5.1 ABOUT SECTION ==================*/
+.aboutSection{
+	width: 100%;
+	float: none;
+	@include mobile-xs{
+		padding: 0 15px;
+	}
+	@include tablet{
+		padding: 0 15px 50px 15px;
+	}
+}
+.aboutInner{
+	position: relative;
+	@include mobile-xs{
+		height: auto;
+		padding: 0 15px 0 15px;
+		background-color: transparent;
+	}
+	@include tablet{
+		height: 650px;
+		padding: 120px 0 0 0;
+		background-color: $white-color;
+	}
+}
+.sepcialContainer{
+	@include mobile-xs{
+		width: 100%;
+		position: relative;
+		left: 0;
+		-moz-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+	@include tablet{
+		width: 750px;
+		position: absolute;
+		left: 0;
+		-moz-transform: translate(-50%, 0);
+		-o-transform: translate(-50%, 0);
+		-ms-transform: translate(-50%, 0);
+		-webkit-transform: translate(-50%, 0);
+		transform: translate(-50%, 0);
+	}
+	@include desktops{
+		width: 970px;
+	}
+	@include large-desktops{
+		width: 1170px;
+	}
+}
+.rightPadding{
+	@include mobile-xs{
+		padding: 50px 15px;
+	}
+	@include tablet{
+		padding: 0 0 0 15px;
+	}
+}
+.imagebox{
+	@include mobile-xs{
+		border: 5px solid $white-color;
+	}
+	@include tablet{
+		border: 5px solid $white-color;
+		border-right: 0;
+	}
+	img{
+		width: 100%;
+		@include mobile-xs{
+			margin: -10px 0 10px 10px;
+		}
+		@include tablet{
+			margin: -40px 0 40px 40px;
+		}
+		@include desktops{
+			margin: -60px 0 60px 60px;
+		}
+	}
+}
+.aboutInfo{
+	@include mobile-xs{
+		padding: 50px 30px;
+		background-color: $white-color;
+		margin: 0 -30px;
+	}
+	@include tablet{
+		padding: 0 0 0 55px;
+		background-color: transparent;
+    margin: 0;
+	}
+	@include desktops{
+		padding: 0 0 0 95px;
+	}
+	h2{
+		letter-spacing: 10px;
+		font-size: 20px;
+		color: $title-color;
+		@include mobile-xs{
+			line-height: 35px;
+		}
+		@include tablet{
+			line-height: 30px;
+		}
+		@include desktops{
+			line-height: 40px;
+		}
+	}
+	h3{
+		font-size: 14px;
+		color: $title-color;
+		text-transform: capitalize;
+		line-height: 26px;
+		font-weight: 400;
+		font-family: 'Open Sans', sans-serif;
+	}
+	p{
+		font-size: 14px;
+	}
+}
+
+/*================= 5.2 VARIETY SECTION ==================*/ 
+.varietySection{
+	padding: 0 0 100px 0;
+	background-color: $white-color;
+	width: 100%;
+	float: none;
+}
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane {
+  display: none;
+}
+
+.tab-content > .active {
+  display: block;
+}
+
+.tabs-left > .nav-tabs > li {
+  float: none;
+  display: block !important;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  border-right-color: #ffffff;
+}
+.tabTop{
+	.nav{
+		text-align: center;
+		border: none;
+		li{
+			display: inline-block;
+			float: none;
+			a{
+				border: none;
+				font-size: 14px;
+				line-height: 26px;
+				color: $title-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				text-transform: uppercase;
+				@include tablet{
+					padding: 0 23px;
+				}
+				@include desktops{
+					padding: 0 33px;
+				}
+				span{
+					border-bottom: 2px solid transparent;
+				}
+				&:hover{
+					background-color: transparent;
+					color: $primary-color;
+					span{
+						border-bottom: 2px solid rgba($primary-color, .5);
+					}
+				}
+			}
+			&.active{
+				a{
+					border: none;
+					color: $primary-color;
+					background-color: transparent;
+					&:hover{
+						border: none;
+						color: $primary-color;
+						background-color: transparent;
+					}
+					span{
+						border-bottom: 2px solid rgba($primary-color, .5);
+					}
+				}
+			}
+		}
+	}
+	.tab-content{
+		@include tablet{
+			padding: 40px 0 0 0;
+		}
+		@include desktops{
+			padding: 40px 0 0 0;
+		}
+		
+	}
+}
+.tabs-left{
+	.tab-content{
+		@include mobile-xs{
+			padding: 0 15px;
+		}
+		@include tablet{
+			padding: 0 15px 0 30px;
+		}
+	}
+	.nav{
+		box-shadow: 0 7px 21px rgba($black-color, .1);
+		margin-right: 0;
+		padding: 25px 0;
+		@include mobile-xs{
+			margin: 0 0 50px 0;
+		}
+		@include tablet{
+			margin: 0;
+		}
+		li{
+			@include mobile-xs{
+				padding: 0 30px;
+			}
+			@include tablet{
+				padding: 0 20px;
+			}
+			@include desktops{
+				padding: 0 45px;
+			}
+			a{
+				padding: 20px 0;
+				border-bottom: 1px dashed #b7b7b7;
+				text-align: left;
+				span{
+					border-bottom: none;
+					float: right;
+				}
+				&:hover{
+					border-bottom: 1px dashed $primary-color;
+					span{
+						border-bottom: none;
+					}
+				}
+			}
+			&.active{
+				a{
+					border-bottom: 1px dashed $primary-color;
+					&:hover, &:focus, a:active{
+						border-bottom: 1px dashed $primary-color;
+					}
+					span{
+						border-bottom: none;
+					}
+				}
+			}
+			&:last-child{
+				a{
+					border: none;
+				}
+			}
+		}
+	}
+}
+.varietyContent{
+	img{
+		margin-bottom: 25px;
+	}
+	h3{
+		font-size: 20px;
+		line-height: 40px;
+		margin: 0 0 15px 0;
+		font-weight: 400;
+	}
+	h4{
+		font-size: 15px;
+		line-height: 26px;
+		color: $primary-color;
+		margin: 0 0 25px 0;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+	}
+	p{
+		font-size: 14px;
+		line-height: 26px;
+		color: $text-color;
+		margin: 0 0 25px 0;
+	}
+	a{
+		width: 239px;
+	}
+}
+
+/*================= 5.3 OFFEERS SECTION ==================*/ 
+.offersSection{
+	padding: 80px 0;
+	width: 100%;
+	float: none;
+}
+.offerContent{
+	position: relative;
+	border-radius: 100%;
+	border: 7px solid rgba($white-color, .5);
+	box-shadow: 0 7px 21px rgba($black-color, .1);
+	@include mobile-xs{
+		width: 254px;
+		height: 254px;
+		margin: 0 auto 30px auto;
+	}
+	@include tablet{
+		width: 160px;
+		height: 160px;
+		margin: 0 auto;
+	}
+	@include desktops{
+		width: 200px;
+		height: 200px;
+	}
+	@include large-desktops{
+		width: 254px;
+		height: 254px;
+	}
+	img{
+		border-radius: 100%;
+		max-width: 100%;
+		height: 100%;
+	}
+	.offerMasking{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+		border-radius: 100%;
+	}
+	.offerTitle{
+		width: 100%;
+		background-color: rgba($primary-color, .7);
+		text-align: center;
+		border-radius: 0 0 100% 100%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		@include mobile-xs{
+			padding: 12px 0 40px 0;
+		}
+		@include tablet{
+			padding: 5px 0 17px 0;
+		}
+		@include desktops{
+			padding: 12px 0 40px 0;
+		}
+		h4{
+			margin: 0;
+			a{
+				font-size: 20px;
+				line-height: 40px;
+				color: $white-color;
+				text-transform: uppercase;
+				font-weight: 400;
+				@include tablet{
+					font-size: 12px;
+				}
+				@include desktops{
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	.offerPrice{
+		width: 65px;
+		height: 65px;
+		text-align: center;
+		background-color: $white-color;
+		border-radius: 100%;
+		position: absolute;
+		box-shadow: 0 7px 21px rgba($black-color, .1);
+		@include mobile-xs{
+			right: -27px;
+			bottom: -3px;
+		}
+		@include tablet{
+			right: -10px;
+			bottom: -35px;
+		}
+		@include desktops{
+			right: -27px;
+			bottom: -3px;
+		}
+		h5{
+			font-family: 'Open Sans', sans-serif;
+			line-height: 65px;
+			margin: 0;
+			font-size: 20px;
+			color: $primary-color;
+		}
+	}
+}
+
+/*================= 5.4 PRODUCT SECTION ==================*/ 
+#productSlider{
+	.carousel-indicators{
+		display: none;
+	}
+	.carousel-control{
+		opacity: 1;
+		width: auto;
+		@include mobile-xs{
+			top: -30px;
+			bottom: auto;
+		}
+		@include tablet{
+			top: 0;
+			bottom: 0;
+		}
+		&.left{
+			background-image: none;
+			color: $primary-color;
+			@include mobile-xs{
+				left: 50%;
+				right: auto;
+				-moz-transform: translate(-140%, 0);
+				-o-transform: translate(-140%, 0);
+				-ms-transform: translate(-140%, 0);
+				-webkit-transform: translate(-140%, 0);
+				transform: translate(-140%, 0);
+			}
+			@include tablet{
+				left: auto;
+				right: 30px;
+				-moz-transform: translate(0, 0);
+				-o-transform: translate(0, 0);
+				-ms-transform: translate(0, 0);
+				-webkit-transform: translate(0, 0);
+				transform: translate(0, 0);
+			}
+			i.fa-long-arrow-left{
+				text-shadow: none;
+			}
+		}
+		&.right{
+			background-image: none;
+			color: $primary-color;
+			@include mobile-xs{
+				right: auto;
+				left: 50%;
+				top: -30px;
+				-moz-transform: translate(0, 0);
+				-o-transform: translate(0, 0);
+				-ms-transform: translate(0, 0);
+				-webkit-transform: translate(0, 0);
+				transform: translate(0, 0);
+			}
+			@include tablet{
+				right: 0;
+				top: 0;
+				left: auto;
+				-moz-transform: translate(0, 0);
+				-o-transform: translate(0, 0);
+				-ms-transform: translate(0, 0);
+				-webkit-transform: translate(0, 0);
+				transform: translate(0, 0);
+			}
+			i.fa-long-arrow-right{
+				text-shadow: none;
+			}
+		}
+	}
+}
+.productInfo{
+	h3{
+		font-weight: 400;
+		margin: 0 0 18px 0;
+	}
+	h4{
+		font-family: 'Open Sans', sans-serif;
+		line-height: 26px;
+		margin: 0 0 14px 0;
+		font-size: 16px;
+		color: $primary-color;
+		font-weight: 400;
+	}
+	p{
+		font-size: 14px;
+		line-height: 26px;
+		color: $text-color;
+		margin: 0 0 25px 0;
+	}
+	a{
+		width: 146px;
+	}
+}
+.rating{
+	margin-bottom: 25px;
+	margin-left: 0;
+	li{
+		padding: 0;
+		i{
+			color: $text-color;
+		}
+	}
+}
+.productImage{
+	position: relative;
+	@include mobile-xs{
+		margin: 0 0 30px 0;
+	}
+	@include tablet{
+		margin: 0;
+	}
+	a{
+		opacity: 0;
+		i{
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			background-color: #404040;
+			position: absolute;
+			color: $white-color;
+			left: 50%;
+			top: 50%;
+			text-align: center;
+			-moz-transform: translate(-50%, -30%);
+			-o-transform: translate(-50%, -30%);
+			-ms-transform: translate(-50%, -30%);
+			-webkit-transform: translate(-50%, -30%);
+			transform: translate(-50%, -30%);
+			-webkit-transition: all 0.4s;
+			-o-transition: all 0.4s;
+			transition: all 0.4s;
+		}
+		&:hover{
+			i{
+				background-color: $primary-color;
+			}
+		}
+	}
+}
+.productSection{
+	padding: 0 0 100px 0;
+	width: 100%;
+	float: none;
+	background-color: $white-color;
+	&:hover{
+		.productImage{
+			a{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/*================= 5.5 REVIEW SECTION ==================*/
+.reviewSection{
+	padding: 0 0 80px 0;
+	width: 100%;
+	float: none;
+}
+.reviewInner{
+	position: relative;
+}
+.reviewImage{
+	position: absolute;
+	top: 80px;
+	width: 165px;
+	height: 160px;
+	border: 5px solid rgba($white-color, .7);
+	@include tablet{
+		left: -125px;
+	}
+	@include desktops{
+		left: -145px;
+	}
+	img{
+		position: absolute;
+		left: 25px;
+		top: -25px;
+	}
+}
+.reviewInfo{
+  padding: 60px 30px 53px 65px;
+  background-color: $white-color;
+  @include mobile-xs{
+  	margin: 0 0 30px 0;
+  }
+  @include desktops{
+  	margin: 0;
+  }
+  img{
+  	margin: 0 0 25px 0;
+  }
+  p{
+  	font-size: 14px;
+  	line-height: 26px;
+  	color: $title-color;
+  	margin: 0 0 25px 0;
+  }
+  h3{
+  	font-size: 16px;
+  	line-height: 26px;
+  	color: $title-color;
+  	margin: 0 0 5px 0;
+  	font-weight: 400;
+  	text-transform: uppercase;
+  }
+  h4{
+  	font-size: 13px;
+  	line-height: 26px;
+  	color: $primary-color;
+  	margin: 0;
+  	font-weight: 400;
+  	text-transform: capitalize;
+  	font-family: 'Open Sans', sans-serif;
+  }
+}
+
+/*================= 5.6 CALL TO ACTION SECTION ==================*/
+.callAction{
+	padding: 60px 0;
+	background-color: $primary-color;
+}
+.callInfo{
+	p{
+		color: $white-color;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 26px;
+		@include mobile-xs{
+			margin: 0 0 20px 0;
+		}
+		@include tablet{
+			margin: 0;
+		}
+	}
+}
+.callBtn{
+	background-color: $white-color;
+	color: $title-color;
+	width: 178px;
+	display: block;
+	@include mobile-xs{
+		margin: 0;
+	}
+	@include tablet{
+		margin: 0 auto;
+	}
+	&:hover{
+		background-color: $white-color;
+		color: $title-color;
+	}
+}
+
+/*================= 5.7 PRICING SECTION ==================*/
+.pricingSection{
+	padding: 0 0 80px 0;
+}
+.priceImage{
+	position: relative;
+	width: 100%;
+	display: block;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@include mobile-xs{
+		height: 190px;
+	}
+	@include tablet{
+		height: 150px;
+	}
+	@include desktops{
+		height: 190px;
+	}
+	img{
+		height: 100%;
+		width: 100%;
+	}
+}
+.maskImage{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($black-color, .3);
+	text-align: center;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	h3{
+		margin: 0;
+		line-height: 190px;
+		font-weight: 700;
+		color: $white-color;
+		@include mobile-xs{
+			line-height: 190px;
+			font-size: 24px;
+		}
+		@include tablet{
+			line-height: 150px;
+			font-size: 16px;
+		}
+		@include desktops{
+			line-height: 190px;
+			font-size: 24px;
+		}
+	}
+}
+.priceTag{
+	background-color: $primary-color;
+	border-radius: 100%;
+	text-align: center;
+	border: 5px solid $white-color;
+	position: absolute;
+	left: 50%;
+	@include mobile-xs{
+		width: 115px;
+		height: 115px;
+		bottom: -55px;
+		margin-left: -50px;
+	}
+	@include tablet{
+		width: 95px;
+		height: 95px;
+		bottom: -45px;
+		margin-left: -45px;
+	}
+	@include desktops{
+		width: 115px;
+		height: 115px;
+		bottom: -55px;
+		margin-left: -50px;
+	}
+	h4{
+		margin: 0;
+		color: $white-color;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		@include mobile-xs{
+			line-height: 105px;
+			font-size: 35px;
+		}
+		@include tablet{
+			line-height: 85px;
+			font-size: 25px;
+		}
+		@include desktops{
+			line-height: 105px;
+			font-size: 35px;
+		}
+	}
+}
+.priceInfo{
+	width: 100%;
+	background-color: #f5f5f5;
+	padding: 60px 0 30px 0;
+	text-align: center;
+	border: 1px solid $border-color;
+	border-top: 0;
+	@include mobile-xs{
+		margin: 0 0 50px 0;
+	}
+	@include tablet{
+		margin: 0;
+	}
+	ul{
+		margin-bottom: 10px;
+		li{
+			border-bottom: 1px solid $border-color;
+			padding: 21px 0;
+			color: $text-color;
+			@include tablet{
+				font-size: 12px;
+			}
+			@include desktops{
+				font-size: 14px;
+			}
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+	a{
+		width: 133px;
+	}
+}
+
+.priceTableWrapper{
+	box-shadow: 0 7px 21px rgba($black-color, 0);
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	&:hover{
+		box-shadow: 0 7px 21px rgba($black-color, .1);
+		.priceInfo{
+			border: 0;
+		}
+		.maskImage{
+			background-color: rgba($primary-color, .3);
+		}
+	}
+}
+/*================= 5.8 CONTACT US SECTION ==================*/
+.contactSection{
+	padding: 0 0 80px 0;
+	background-color: $white-color;
+}
+.contactTitle{
+	h3{
+		font-weight: 400;
+		font-size: 20px;
+		color: $title-color;
+		margin: 0 0 25px 0;
+	}
+}
+.holdingInfo{
+	padding: 40px 50px 30px 30px;
+	margin: 45px 0 0 0;
+	p{
+		margin: 0 0 30px 0;
+	}
+	ul{
+		li{
+			font-size: 14px;
+			line-height: 26px;
+			color: $text-color;
+			position: relative;
+			margin: 0 0 18px 0;
+			@include mobile-xs{
+				padding: 0 0 0 25px;
+			}
+			@include tablet{
+				padding: 0 0 0 25px;
+			}
+			@include desktops{
+				padding: 0 0 0 38px;
+			}
+			i{
+				position: absolute;
+				left: 0;
+				top: 5px;
+				color: $primary-color;
+				font-size: 18px;
+			}
+			&:last-child{
+				margin: 0;
+			}
+			a{
+				font-size: 14px;
+				line-height: 26px;
+				color: $text-color;
+			}
+		}
+	}
+}
+
+/*================= 5.9 PARTNER LOGO SECTION ==================*/
+.brandArea{
+	padding: 55px 0;
+	.slide{
+			display: table;
+			width: 100%;
+			height: 115px;
+			.partnersLogo{
+		    width: 270px;
+		    display: table-cell;
+		    vertical-align: middle;
+		    text-align: center !important;
+		    img{
+		    	width: auto;
+		    	margin: 0 auto;
+		    	line-height: 115px;
+		    }
+			}
+	}
+	.owl-stage-outer{
+		border-bottom: none; 
+	}
+	.owl-next, .owl-prev{
+		-webkit-transition: all 0.4s;
+		-o-transition: all 0.4s;
+		transition: all 0.4s;
+		background-color: transparent !important;
+		box-shadow: none !important;
+		border: none;
+		width: 40px;
+		height: 40px;
+		padding: 0 !important;
+		span{
+			display: none;
+		}
+	}
+	.owl-next:before{
+			color: #716d6e;
+			content: "\f105";
+			display: inline-block;
+			font-family: FontAwesome;
+			font-size: 40px;
+			font-weight: 700;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			line-height: 40px;
+	}
+	.owl-prev:before{
+		color: #716d6e;
+		line-height: 40px;
+		content: "\f104";
+		display: inline-block;
+		font-family: FontAwesome;
+		font-size: 40px;
+		font-weight: 700; 
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+
+/*================= 5.10 HOME GALLERY SECTION ==================*/
+.homeGalleryTitle{
+	width: 100%;
+	float: none;
+}
+.homeGallery{
+	padding: 0;
+	.row{
+		margin: 0;
+	}
+	.col-sm-3{
+		padding: 0;
+	}
+	ul.filter{
+		>li {
+			@include mobile-xs{
+				padding: 0 10px;
+				margin-bottom: 25px;
+			}
+			@include tablet{
+				padding: 0 20px;
+				margin-bottom: 0;
+			}
+			>a{
+				padding: 0;
+				border-bottom: 2px solid transparent;
+				font-size: 14px;
+				line-height: 26px;
+				color: #6b6b6b;
+				text-transform: uppercase;
+				font-weight: 600;
+				padding-bottom: 10px;
+				&:hover{
+					background-color: transparent;
+					border-bottom: 2px solid rgba($primary-color, 0.5);
+					color: $primary-color;
+				}
+			}
+			&.active{
+				>a{
+					background-color: transparent;
+					border-bottom: 2px solid rgba($primary-color, 0.5);
+					color: $primary-color; 
+				}
+			}
+		}
+	}
+}
+.filter-container {
+    padding: 0 20px 50px 20px;
+}
+figure{
+	position: relative;
+	height: auto;
+}
+.isotopeSelector{
+	.overlay{
+		width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    left: 0;
+    top: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+		.fancybox-pop {
+			width: 100%;
+			height: 100%;
+			display: block;
+			text-align: center;
+			position: absolute;
+			z-index: 1000;
+		}
+	}
+}
+figure{
+	&:hover{
+		.overlay{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.overlayInfo{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-moz-transform: translate(-50%, -30%);
+	-o-transform: translate(-50%, -30%);
+	-ms-transform: translate(-50%, -30%);
+	-webkit-transform: translate(-50%, -30%);
+	transform: translate(-50%, -30%);
+	h5{
+		font-size: 20px;
+		font-weight: 400;
+		color: $white-color;
+		text-transform: uppercase;
+		margin: 0;
+		i{
+			margin-bottom: 15px;
+		}
+	}
+}
+
+/*================= 5.11 EXPERT SECTION ==================*/
+.expertSection{
+	padding: 0 0 90px 0;
+	.carousel-control{
+		display: none;
+	}
+	.carousel-inner{
+		@include mobile-xs{
+			min-height: 445px;
+		}
+		@include tablet{
+			min-height: 340px;
+		}
+		@include desktops{
+			min-height: 445px;
+		}
+	}
+	.carousel-indicators{
+		li{
+			border-color: $primary-color;
+			width: 12px;
+			height: 12px;
+			&.active{
+				width: 16px;
+				height: 16px;
+				background-color: $primary-color;
+			}
+		}
+	}
+	.carousel-indicators {
+		@include mobile-xs{
+			bottom: -35px;
+		}
+		@include tablet{
+			bottom: 0;
+		}
+	}
+}
+.expertImage{
+	overflow: hidden;
+	border-radius: 100%;
+	border: 7px solid $white-color;
+	position: relative;
+	box-shadow: 0 7px 21px rgba($black-color, .3);
+	margin: 0 auto;
+	@include mobile-xs{
+		width: 263px;
+		height: 263px;
+	}
+	@include tablet{
+		width: 160px;
+		height: 160px;
+	}
+	@include desktops{
+		width: 230px;
+		height: 230px;
+	}
+	img{
+		max-width: 100%;
+	}
+}
+.expertMask{
+	width: 100%;
+	height: 100%;
+	background-color: rgba($primary-color, 0.5);
+	position: absolute;
+	border-radius: 100%;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.socialArea{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 60px;
+	ul{
+		text-align: center;
+		li{
+			a{
+				color: $white-color;
+			}
+		}
+	}
+}
+.expertCaption {
+	margin-top: 25px;
+	h2{
+		margin: 0 0 10px 0;
+		font-size: 20px;
+		line-height: 26px;
+		color: $title-color;
+		font-weight: 400;
+		-webkit-transition: all 0.4s;
+		-o-transition: all 0.4s;
+		transition: all 0.4s;
+	}
+	p{
+		margin: 0;
+		@include tablet{
+			font-size: 12px;
+		}
+		@include desktops{
+			font-size: 14px;
+		}
+	}
+}
+.expertBox{
+	margin-bottom: 25px;
+	text-align: center;
+	&:hover{
+		.expertMask{
+			opacity: 1;
+		}
+		.expertCaption{
+			h2{
+				color: $primary-color;
+			}
+		}
+	}
+}
+

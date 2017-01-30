@@ -1,0 +1,207 @@
+/*================= 11. BLOG ==================*/
+
+/*================= 11.1 BLOG SINGLE ==================*/
+.blogSingle{
+	@include mobile-xs{
+		padding: 50px 0;
+	}
+	@include tablet{
+		padding: 100px 0;
+	}
+}
+.blogPost{
+	border-bottom: 1px dashed #b7b7b7;
+	@include mobile-xs{
+		padding-bottom: 50px;
+		margin-bottom: 50px;
+	}
+	@include tablet{
+		padding-bottom: 95px;
+		margin-bottom: 100px;
+	}
+	img{
+		@include mobile-xs{
+			margin-bottom: 20px;
+		}
+		@include tablet{
+			margin-bottom: 35px;
+		}
+	}
+	h2{
+		font-size: 24px;
+		font-weight: 400;
+	}
+	p{
+		img{
+			float: right;
+			@include mobile-xs{
+				margin: 0 0 25px 0;
+				width: 100%;
+			}
+			@include tablet{
+				margin: 0 0 0 25px;
+				width: auto;
+			}
+		}
+	}
+	.list-inline{
+		li{
+			a{
+				color: $text-color;
+				margin: 0 0 5px 0;
+				i.fa{
+					font-size: 13px;
+					color: #cdcdcd;
+					margin: 0 5px 0 0;
+				}
+			}
+		}
+	}
+}
+.blogCommnets{
+	@include mobile-xs{
+		margin-bottom: 50px;
+	}
+	@include tablet{
+		margin-bottom: 100px;
+	}
+	h3{
+		font-size: 24px;
+		margin-bottom: 35px;
+    letter-spacing: 1px;
+	}
+	.media{
+		padding-bottom: 15px;
+		border-bottom: 1px dashed #b7b7b7;
+		@include mobile-xs{
+			margin-top: 15px;
+		}
+		@include tablet{
+			margin-top: 30px;
+		}
+	}
+	.media>.pull-left{
+		@include mobile-xs{
+			padding: 0 0 20px 0;
+		}
+		@include tablet{
+			padding: 0 20px 0 0;
+		}
+	}
+	.media-body{
+		h4{
+			font-weight: 400;
+			text-transform: uppercase;
+			margin: 0 0 15px 0;
+		}
+		h5{
+			color: $text-color;
+			font-size: 13px;
+			font-weight: 400;
+			margin-bottom: 20px;
+			i.fa{
+				color: #cdcdcd;
+				margin-right: 7px;
+			}
+		}
+		.btn-link{
+			color: $primary-color;
+			text-transform: capitalize;
+		}
+	}
+	.mediaMargin{
+		@include tablet{
+			margin-left: 50px;
+		}
+		@include tablet{
+			margin-left: 100px;
+		}
+	}
+}
+.commentsForm{
+	h3{
+		font-size: 24px;
+		margin-bottom: 35px;
+    letter-spacing: 1px;
+	}
+	.btn-primary{
+		width: 158px;
+		text-align: center;
+	}
+}
+.blogSidebar{
+	.input-group{
+		margin-bottom: 30px;
+	}
+	.input-group-addon{
+		border-radius: 0;
+		background-color: $white-color;
+		border-color: $border-color;
+	}
+	.form-control{
+		border-right: 0;
+	}
+	.panel{
+		border-radius: 0;
+		border: none;
+		margin-bottom: 30px;
+	}
+	.panel-heading{
+		background-color: $primary-color;
+		border-color: $primary-color;
+		color: $white-color;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+    padding: 12px 15px;
+    border-radius: 0;
+	}
+	.panel-body{
+		border: 1px solid $border-color;
+		border-top: none;
+		padding: 30px;
+	}
+	.categoryList{
+		li{
+			a{
+				padding: 14px 0;
+				display: block;
+				border-bottom: 1px dashed #b7b7b7;
+				color: $text-color;
+				&:hover{
+					color: $primary-color;
+				}
+			}
+			&:last-child{
+				a{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+	.media{
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px dashed #b7b7b7;
+		.pull-left{
+			padding-right: 20px;
+		}
+		&:last-child{
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+	.media-body{
+		.media-heading{
+			a{
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 22px;
+				margin-bottom: 10px;
+				color: $title-color;
+			}
+		}
+	}
+}
