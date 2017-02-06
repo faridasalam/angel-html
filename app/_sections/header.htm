@@ -92,18 +92,8 @@
                 <li class="@@if (active === 'services') {active} dropdown singleDrop">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
                   <ul class="dropdown-menu dropdown-menu-left">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery</a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Gallery Grid</a></li>
-                        <li><a href="#">Gallery Masonry</a></li>
-                        <li><a href="#">Photo Slider</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">404 Not Found</a></li>
-                    <li><a href="#">Coming Soon</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="single-service.html">Single Services</a></li>
                   </ul>
                 </li>
                 <li class="@@if (active === 'store') {active} dropdown megaDropMenu">
@@ -129,11 +119,9 @@
                     </li>
                     <li class="col-sm-3 col-xs-12">
                       <ul class="list-unstyled">
-                        <li><a href="#">Package Sidebar Left</a></li>
-                        <li><a href="#">Package Sidebar Right</a></li>
-                        <li><a href="#">Package Fullwidth</a></li>
-                        <li><a href="#">Package Sidebar Right</a></li>
-                        <li><a href="#">Package Fullwidth</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="success.html">Confirmation</a></li>
                       </ul>
                     </li>
                     <li class="col-sm-3 col-xs-12 mega-img">
@@ -147,10 +135,17 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Team</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="member.html">Our Team</a></li>
+                        <li><a href="single-member-profile.html">Single Team</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery</a>
                       <ul class="dropdown-menu">
-                        <li><a href="#">Gallery Grid</a></li>
-                        <li><a href="#">Gallery Masonry</a></li>
+                        <li><a href="gallery-v1.html">Gallery 3 Col</a></li>
+                        <li><a href="gallery-v2.html">Gallery 4 Col</a></li>
                         <li><a href="#">Photo Slider</a></li>
                       </ul>
                     </li>
@@ -162,22 +157,15 @@
                   <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                   <ul class="dropdown-menu dropdown-menu-right">
                     <li class="dropdown dropdown-submenu">
-                      <a href="javascript:void(0)" class="dropdown-toggle " data-toggle="dropdown">Blog Grid View</a>
+                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
                       <ul class="dropdown-menu">
-                        <li><a href="#">Blog Grid 3 Col</a></li>
-                        <li><a href="#">Blog Grid 2 Col</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown dropdown-submenu">
-                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Blog List View</a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Blog List Right Sidebar</a></li>
+                        <li><a href="blog.html">Blog List Right Sidebar</a></li>
                         <li><a href="#">blog-list-left-sidebar.html</a></li>
                         <li><a href="#">Blog List Fullwidth</a></li>
                       </ul>
                     </li>
                     <li class="dropdown dropdown-submenu">
-                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Single Blog Post</a>
+                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Single Blog</a>
                       <ul class="dropdown-menu">
                         <li><a href="blog-single.html">Right Sidebar</a></li>
                         <li><a href="blog-single-left-sidebar.html">Left Sidebar</a></li>
@@ -185,8 +173,11 @@
                     </li>
                   </ul>
                 </li>
-                <li class="@@if (active === 'contact') {active}">
+                <li class="@@if (active === 'blog') {active} dropdown singleDrop">
                   <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="tabs-pagination.html">Tab & Pagination</a></li>
+                  </ul>
                 </li>
               </ul>
             </div>

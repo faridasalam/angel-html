@@ -966,7 +966,7 @@
   .row{
     margin: 0;
   }
-  .col-sm-3{
+  .col-sm-3, .col-sm-4{
     padding: 0;
   }
   ul.filter{
@@ -1001,6 +1001,16 @@
           color: $primary-color; 
         }
       }
+    }
+  }
+}
+.homeGallery.gallery-v1{
+  .col-sm-4, .col-sm-3{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    &:last-child{
+      margin-bottom: 0;
     }
   }
 }
@@ -1198,4 +1208,15 @@ figure{
     }
   }
 }
-
+.page-expert {
+  .item{
+    .expertBox{
+      margin-bottom: 40px;
+    }
+    &:last-child{
+      .expertBox{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
