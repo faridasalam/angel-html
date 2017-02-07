@@ -506,7 +506,7 @@ textarea{
   margin-top: 10px;
   display: block;
   ul.navbar-nav{
-    border: 1px solid #b7b7b7;
+    border: 1px solid rgba($black-color, 0.1);
     float: none;
     height: auto;
     overflow-x: visible;
@@ -535,12 +535,10 @@ textarea{
         i{
           position:absolute;
           right: 25px;
-          font-size: 15px;
+          font-size: 12px;
+          line-height: 20px;
           font-weight: lighter;
           color: rgba($black-color, 0.6);
-          @include mobile {
-            font-size: 19px;
-          }
         }   
       }
       a.collapsed[aria-expanded="true"] {
@@ -567,32 +565,32 @@ textarea{
 }
 .collapse-style2 .navbar-collapse.content-collapse {
     ul.navbar-nav{
-      li{
-        border-bottom:none;
-        margin-bottom: 20px;
-        a{
-          border-bottom:1px solid #dedede;
-          background:#f5f5f5;
-        }
-      }
-    }
-    .collapse-inner{
-      padding:20px 25px 20px 25px ;
-      border-bottom:1px solid #dedede;
-    }
-}
-.collapse-style3 .navbar-collapse.content-collapse {
-    ul.navbar-nav{
+      border: none;
       li{
         border:none;
+        margin-bottom: 20px;
         a{
-          border:1px solid #dedede;
-          background:#f5f5f5;
+          background: url(../img/home/pattern-1.jpg) repeat;
+          color: #222222;
+          i{
+            color: rgba($black-color, 0.6);
+          }
+        }
+      }
+      li.active{
+        a{
+          background:$primary-color;
+          color: $white-color;
+          i{
+            color: $white-color;
+          }
         }
       }
     }
     .collapse-inner{
       padding:20px 25px 20px 25px ;
+      border: 1px solid rgba($black-color, 0.1);
+      border-top:none;
     }
 }
 

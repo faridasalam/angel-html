@@ -280,4 +280,10 @@ $('#productSlider, #thubmnailTeamSlider').on('touchstart', function(event){
     });
   });
 
+  //============================== ACCRODION ========================= 
+
+  $('.content-collapse li').click(function () {
+      $(this).toggleClass("active").siblings().removeClass("active");
+    });
+
 });
