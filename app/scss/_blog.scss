@@ -10,6 +10,10 @@
   }
 }
 .singlePost{
+  >img{
+    display: block;
+    width: 100%;
+  }
   border-bottom: 1px dashed #b7b7b7;
   @include mobile-xs{
     padding-bottom: 50px;
@@ -18,7 +22,7 @@
     padding-bottom: 95px;
   }
 }
-.blogSingle .paginationCommon{
+.blog .paginationCommon{
   nav{
     border-top: none;
     @include mobile-xs{
@@ -31,6 +35,10 @@
   .pagination{
     margin:  0;
   }
+}
+.blog-fullwidth .blogPost img{
+  display: block;
+  width: 100%;
 }
 .blogPost{
   @include mobile-xs{
