@@ -47,8 +47,7 @@
     9.4 PRODUCT
 10. PROFILE
 11. BLOG
-    11.1 BLOG SINGLE
-
+12. USER
 
 ===================== */
 @import 'partials/mixins';
@@ -65,9 +64,5 @@
 @import 'products';
 @import 'profile';
 @import 'blog';
-
-
-
-
-
+@import 'user';
 

@@ -54,6 +54,7 @@
         font-family: 'Montserrat', sans-serif;
         line-height: 26px;
         color: $black-color;
+        vertical-align: middle;
         @include mobile-xs{
           font-size: 14px;
           padding: 5px;
@@ -73,6 +74,19 @@
             font-size: 18px;
           }
         }
+        .btn{
+          font-size: 14px;
+          color: $text-color;
+          line-height: 20px;
+          width: 150px;
+          padding-left:0;
+          padding-right:0;
+          text-align: center;
+          &:hover, &:focus{
+            color: $white-color;
+            background-color:$primary-color;
+          }
+        }
         span{
           color: $text-color;
           font-size: 13px;
@@ -88,8 +102,9 @@
         }
         .close{
           opacity: 1;
+          line-height: 45px;
           span{
-            font-size: 50px;
+            font-size: 45px;
             font-weight: 400;
             font-family: 'Open Sans', sans-serif;
             color: $text-color;
@@ -147,7 +162,6 @@
     border: 1px solid $primary-color;
   }
   .input-group-addon{
-    
     background-color: transparent;
     color: $title-color;
     font-weight: 700;
@@ -186,6 +200,14 @@
   }
   @include tablet{
     padding: 100px 0;
+  }
+}
+.orderSection .table-responsive{
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 0;
+  @include tablet{
+    overflow-x: auto;
   }
 }
 .checkInfo{

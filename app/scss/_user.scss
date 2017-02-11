@@ -1,0 +1,234 @@
+/*=== 15. USER PROFILE ===*/
+/*=== 15.1 COMMON PART ===*/
+.profile{
+	padding: 30px 20px;
+	border: 1px solid #dedede;
+	border-top:none;
+}
+.innerWrapper{
+	width: 100%;
+	display: block;
+	.alert{
+		margin-bottom: 40px;
+	}
+	.form-group button {
+	    width: 100%;
+	}
+}
+.orderBox{
+    height: 56px;
+    padding: 0 20px;
+    line-height: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+    font-size: 20px;
+    margin-bottom:30px;
+}
+.dashboard{
+	margin-bottom:50px;
+	 h4{
+		font-family: 'Open Sans', sans-serif;
+	    font-weight: 400;
+	    text-transform: uppercase;
+	    color: #222222;
+	    font-size: 18px;
+	    margin-bottom: 20px;
+	}
+}
+.dashboard.list-inline{
+	display: block;
+	margin-bottom: 50px;
+	li{
+		padding: 0;
+		display: block;
+		margin-bottom: 10px;
+		@include tablet{
+			padding: 0 10px 0 0;
+			display: inline-block;
+			margin: 0
+		}
+		@include desktops{
+			padding: 0 20px 0 0;
+		}
+		.btn-lg{
+			background-color: #f0f0f0;
+			color: $text-color;
+			font-weight: 700;  
+			@include transition(all 0.3s ease-in-out);
+			@include mobile-xs{
+				width: 100%;
+				padding: 47px 0;
+				font-size: 16px;
+			}
+			@include mobile{
+				width: 100%;
+				padding: 47px 0;
+				font-size: 16px;
+			}
+			@include tablet{
+				width: 134px;
+				padding: 31px 0;
+				font-size: 14px;
+			}
+			@include desktops{
+				width: 170px;
+				padding: 47px 0;
+				font-size: 16px;
+			}
+			@include large-desktops{
+				width: 210px;
+				padding: 67px 0;
+				font-size: 18px;
+			}
+			i{
+				display: block;
+				margin-bottom: 20px;
+			}
+			&:hover{
+				background-color: $primary-color;
+				color: $white-color;
+			}
+		}
+		&:last-child{
+			padding: 0;
+		}
+	}
+}
+.innerWrapper h3 {
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+    font-size: 20px;
+    margin-bottom: 20px;
+    span{
+    	color: $primary-color;
+    }
+}
+.userSection .orderBox{
+	margin-bottom:0;
+}
+.innerWrapper{
+	.table-responsive{
+		border: 1px solid #dedede;
+		border-top:none;
+		margin-bottom: 0;
+		@include mobile{
+			overflow-x: auto;
+		}
+		@include tablet{
+			overflow-x: visible;
+		}
+		.table{
+			margin-bottom: 0;
+			thead{
+				tr{
+					th{
+						border:none;
+						background-color: $primary-color;
+						padding: 0;
+						height: 55px;
+						vertical-align: middle;
+						text-align: left;
+						font-size: 12px;
+						color: #ffffff;
+						padding: 10px 10px 10px 20px;
+						border-right: 1px solid rgba(255, 255, 255, 0.2);
+						border-bottom: none;
+						text-align: center;
+						@include tablet{
+							text-align: left;
+							font-size: 15px;
+						}
+					}
+					th:last-child{
+						border:none;
+					}
+				}
+			}
+			tbody{
+				tr{
+					td{
+						padding-left: 20px;
+						font-weight: 400;
+						vertical-align: middle;
+						.btn-default{
+							box-shadow: none;
+							border-radius: 0;
+							padding: 15px 20px;
+							display: inline-block;
+							font-size: 12px;
+							font-weight: 700;
+							color: #666666;
+							border: 1px solid #dedede;
+							@include transition(all 0.3s ease-in-out);
+							text-transform: uppercase;
+							&:hover{
+								background-color: $primary-color;
+								color: $white-color;
+								border-color: $primary-color;
+							}
+						}
+						&:last-child{
+							text-align: center;
+							padding-left: 10px;
+						}
+						&:first-child{
+							color: $primary-color;
+							.fa{
+								color: $secondary-color;
+							}
+						}
+						.label{
+							border-radius: 0;
+							font-size: 12px;
+						}
+						.btn-group, .btn-group-vertical {
+						    display: -webkit-box;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*=== 15.2 PROFILE ===*/
+.profile{
+	.orderBox{
+		margin-bottom: 30px;
+	}
+	.thumbnail{
+		border: none;
+    	border-radius: 0;
+   		padding: 0;
+		img{
+			width: 100%;
+		}
+		.caption{
+			padding: 20px 0 0 0;
+		}
+	}
+	.form-horizontal{
+		.form-group{
+			@include mobile{
+				margin-bottom: 20px;
+			}
+			@include tablet{
+				margin-bottom: 30px;
+			}
+			.control-label{
+				padding-top: 0;
+				@include mobile{
+					height: 25px;
+					line-height: 25px;
+				}
+				@include tablet{
+					height: 50px;
+					line-height: 50px;
+				}
+			}
+		}
+	}
+}
