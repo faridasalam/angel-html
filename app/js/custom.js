@@ -1,9 +1,9 @@
 jQuery(document).ready(function(){
-
-//============================== SELECT BOX =========================
+  
+  //============================== SELECT BOX =========================
   $('.select-drop').selectbox();
 
-//============================== header =========================
+  //============================== header =========================
 
   $('.navbar a.dropdown-toggle').on('click', function(e) {
       var elmnt = $(this).parent().parent();
@@ -37,7 +37,7 @@ jQuery(document).ready(function(){
     }
   });
 
-//============================== BACK TO TOP =========================
+  //============================== BACK TO TOP =========================
   $(document).ready(function(){ 
     $(window).scroll(function(){ 
       if ($(this).scrollTop() > 10) { 
@@ -48,7 +48,7 @@ jQuery(document).ready(function(){
     }); 
   });
 
-//============================== BACK TO TOP SMOOTH SCROLL=========================
+  //============================== BACK TO TOP SMOOTH SCROLL=========================
   $('.backToTop').on('click', function (event) {
     event.preventDefault();
     $(document).off('scroll');
@@ -65,7 +65,7 @@ jQuery(document).ready(function(){
     });
   });
 
-//============================== MAIN SLIDER ========================= 
+  //============================== MAIN SLIDER ========================= 
  
   var $heroSlider = $( '.main-slider .inner' );
   if ( $heroSlider.length > 0 ) {
@@ -90,7 +90,7 @@ jQuery(document).ready(function(){
     });
   } 
 
-//============================== OWL-CAROUSEL =========================
+  //============================== OWL-CAROUSEL =========================
 
 
   var owl = $('.owl-carousel.partnersLogoSlider');
@@ -119,115 +119,115 @@ jQuery(document).ready(function(){
       }
     });
 
-//============================== EXPERT SLIDER =========================
+  //============================== EXPERT SLIDER =========================
     $(document).ready(function() {
       $('#myCarousel').carousel({ interval: 3000, cycle: true });
     });
 
-//============================== SMOOTH SCROLLING TO SECTION =========================
-$(document).ready(function () {
-  $('.scrolling  a[href*="#"]').on('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var target = $(this).attr('href');
-    $(target).velocity('scroll', {
-      duration: 800,
-      offset: -150,
-      easing: 'easeOutExpo',
-      mobileHA: false
+  //============================== SMOOTH SCROLLING TO SECTION =========================
+  $(document).ready(function () {
+    $('.scrolling  a[href*="#"]').on('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var target = $(this).attr('href');
+      $(target).velocity('scroll', {
+        duration: 800,
+        offset: -150,
+        easing: 'easeOutExpo',
+        mobileHA: false
+      });
     });
   });
-});
 
-//============================== DATE-PICKER =========================
-$(document).ready(function () {
-  $('.datepicker').datepicker({
-    startDate: 'dateToday',
-    autoclose: true
+  //============================== DATE-PICKER =========================
+  $(document).ready(function () {
+    $('.datepicker').datepicker({
+      startDate: 'dateToday',
+      autoclose: true
+    });
   });
-});
 
-//============================== SLIDER RESIZE =========================
+  //============================== SLIDER RESIZE =========================
 
-if ($(window).width() < 768) {
-  function resizeContent() {
-    $height = $(window).height() - 119;
-    $('.slideResize').height($height);
+  if ($(window).width() < 768) {
+    function resizeContent() {
+      $height = $(window).height() - 119;
+      $('.slideResize').height($height);
+    }
   }
-}
-else {
-  function resizeContent() {
-    $height = $(window).height() - 159;
-    $('.slideResize').height($height);
+  else {
+    function resizeContent() {
+      $height = $(window).height() - 159;
+      $('.slideResize').height($height);
+    }
   }
-}
 
-$(document).ready(function(){
-  resizeContent();
-
-  $(window).resize(function() {
+  $(document).ready(function(){
     resizeContent();
+
+    $(window).resize(function() {
+      resizeContent();
+    });
   });
-});
 
-//============================== COUNT DOWN =========================
-$('#simple_timer').syotimer({
-  year: 2018,
-  month: 5,
-  day: 9,
-  hour: 20,
-  minute: 30
-});
+  //============================== COUNT DOWN =========================
+  $('#simple_timer').syotimer({
+    year: 2018,
+    month: 5,
+    day: 9,
+    hour: 20,
+    minute: 30
+  });
 
-//============================== SIDE TAB / NAV MENU TOGGLE =========================
-//Single Service Page
-$('.nav-stacked li a').click(function() {
-  $('.nav-stacked li a i').removeClass('fa fa-angle-up');
-  $('.nav-stacked li a i').addClass('fa fa-angle-down');
-  $(this).find('i').toggleClass('fa fa-angle-down fa fa-angle-up');
-});
+  //============================== SIDE TAB / NAV MENU TOGGLE =========================
+  //Single Service Page
+  $('.nav-stacked li a').click(function() {
+    $('.nav-stacked li a i').removeClass('fa fa-angle-up');
+    $('.nav-stacked li a i').addClass('fa fa-angle-down');
+    $(this).find('i').toggleClass('fa fa-angle-down fa fa-angle-up');
+  });
 
-$('.productSide li a').click(function() {
-  $(this).find('i').toggleClass('fa fa-minus fa fa-plus');
-});
+  $('.productSide li a').click(function() {
+    $(this).find('i').toggleClass('fa fa-minus fa fa-plus');
+  });
 
-//============================== PRICE RANGER SLIDER =========================
-var minimum = 12;
-var maximum = 300;
+  //============================== PRICE RANGER SLIDER =========================
+  var minimum = 12;
+  var maximum = 300;
 
-$( '#price-range' ).slider({
-  range: true,
-  min: minimum,
-  max: maximum,
-  values: [ minimum, maximum ],
-  slide: function( event, ui ) {
-    $( '#price-amount-1' ).val( '$' + ui.values[ 0 ] );
-    $( '#price-amount-2' ).val( '$' + ui.values[ 1 ] );
-  }
-});
+  $( '#price-range' ).slider({
+    range: true,
+    min: minimum,
+    max: maximum,
+    values: [ minimum, maximum ],
+    slide: function( event, ui ) {
+      $( '#price-amount-1' ).val( '$' + ui.values[ 0 ] );
+      $( '#price-amount-2' ).val( '$' + ui.values[ 1 ] );
+    }
+  });
 
-$( '#price-amount-1' ).val( '$' + $( '#price-range' ).slider( 'values', 0 ));
-$( '#price-amount-2' ).val( '$' + $( '#price-range' ).slider( 'values', 1 ));
+  $( '#price-amount-1' ).val( '$' + $( '#price-range' ).slider( 'values', 0 ));
+  $( '#price-amount-2' ).val( '$' + $( '#price-range' ).slider( 'values', 1 ));
 
 
-//============================== BOOTSTRA CAROUSEL SWIEP =========================
-$('#productSlider, #thubmnailTeamSlider').on('touchstart', function(event){
-    var xClick = event.originalEvent.touches[0].pageX;
-    $(this).one('touchmove', function(event){
-        var xMove = event.originalEvent.touches[0].pageX;
-        if( Math.floor(xClick - xMove) < -5 ){
-            $('#productSlider, #thubmnailTeamSlider').carousel('prev');
-        }
-        else if( Math.floor(xClick - xMove) > 5 ){
-            $('#productSlider, #thubmnailTeamSlider').carousel('next');
-        }
-    });
-    $('.carousel').on('touchend', function(){
-            $(this).off('touchmove');
-    });
-});
+  //============================== BOOTSTRA CAROUSEL SWIEP =========================
+  $('#productSlider, #thubmnailTeamSlider').on('touchstart', function(event){
+      var xClick = event.originalEvent.touches[0].pageX;
+      $(this).one('touchmove', function(event){
+          var xMove = event.originalEvent.touches[0].pageX;
+          if( Math.floor(xClick - xMove) < -5 ){
+              $('#productSlider, #thubmnailTeamSlider').carousel('prev');
+          }
+          else if( Math.floor(xClick - xMove) > 5 ){
+              $('#productSlider, #thubmnailTeamSlider').carousel('next');
+          }
+      });
+      $('.carousel').on('touchend', function(){
+              $(this).off('touchmove');
+      });
+  });
 
-//============================== BOOTSTRA THUMBNAIL SLIDER =========================
+  //============================== BOOTSTRA THUMBNAIL SLIDER =========================
   (function(){
     $('#thubmnailTeamSlider').carousel({ interval: 3000 });
   }());
@@ -250,7 +250,7 @@ $('#productSlider, #thubmnailTeamSlider').on('touchstart', function(event){
         });
   }());
 
-//============================== FANCY BOX =========================
+  //============================== FANCY BOX =========================
   $(document).ready(function() {
     
     $('a.group').fancybox({
@@ -263,7 +263,7 @@ $('#productSlider, #thubmnailTeamSlider').on('touchstart', function(event){
     
   });
 
-//============================== SINGLE SERVICE LEFT TAB ========================= 
+  //============================== SINGLE SERVICE LEFT TAB ========================= 
   $(document).ready(function($) {
     $('#singleServiceTab a').click(function (e) {
       e.preventDefault();
