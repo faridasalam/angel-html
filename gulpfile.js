@@ -19,53 +19,73 @@ var fileinclude  = require('gulp-file-include');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync  = require('browser-sync').create();
 
-var devMode, jsSources, sassSources, htmlSources, imgSource, outputDir, sassStyle;
+var path = {
+    src: { // source
+        html    : 'app/*.html',
+        htminc  : 'app/_sections/',
+        plugins : 'app/plugins/**/*.*',
+        js      : 'app/js/*.js',
+        scss    : 'app/scss/**/*.scss',
+        img     : 'app/img/**/*.+(png|jpg|gif)'
+    },
+    build: { // development
+        dir     : 'development/',
+        html    : 'development/*.html',
+        plugins : 'development/plugins/**/*.*',
+        plugdir : 'development/plugins/',
+        js      : 'development/js/*.js',
+        jsdir   : 'development/js/',
+        css     : 'development/css/*.css',
+        cssdir  : 'development/css/',
+        img     : 'development/img/**/*.+(png|jpg|gif)',
+        imgdir  : 'development/img/',
+    },
+    public: { // production
+        dir     : 'public/'
+    }
+};
 
-devMode     = true;
 
-htmlSources = ['app/*.html'];
-sassSources = ['app/scss/**/*.scss'];
-jsSources   = ['app/js/*.js'];
-imgSource   = ['app/img/**/*.+(png|jpg|gif)'];
-outputDir   = devMode ? 'builds/development/' : 'builds/production/';
+/* =====================================================
+    HTML
+    ===================================================== */
 
-gulp.task('htmlinclude', function() {
-  return gulp.src(htmlSources)
+gulp.task('html:build', function() {
+  return gulp.src( path.src.html )
     .pipe(customPlumber('Error Running html-include'))
-    .pipe(fileinclude({ basepath: 'app/_sections/'}))
-    .pipe(gulpif( !devMode, minifyHTML({empty: true})))
-    .pipe(gulp.dest(outputDir));
-});
-
-gulp.task('w3validate', ['htmlinclude'], function() {
-  return gulp.src(outputDir + '**/*.html')
-    .pipe(customPlumber('Error Running W3-Validate'))
-    .pipe(w3cjs())
-    .pipe(notify(function (file) {
-      if (!file.w3cjs.success) {
-        return "Validation error on " + file.relative + " (" + file.w3cjs.messages.length + " errors)\n";
-      }
+    .pipe(fileinclude({ basepath: path.src.htminc }))
+    .pipe(gulp.dest( path.build.dir ))
+    .pipe(browserSync.reload({
+      stream: true
     }));
 });
 
-gulp.task('html', ['htmlinclude']);
 
-gulp.task('sass', function() {
+/* =====================================================
+    SCSS
+    ===================================================== */
+
+gulp.task('scss:build', function() {
   var ignoreNotification = false;
-  return gulp.src( sassSources )
+  return gulp.src( path.src.scss )
     .pipe(customPlumber('Error Running Sass'))
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest( outputDir + 'css' ))
+    .pipe(gulp.dest( path.build.cssdir ))
     .pipe(browserSync.reload({
       stream: true
     }));
 })
 
-gulp.task('js', function() {
-  return gulp.src( jsSources )
+
+/* =====================================================
+    JS
+    ===================================================== */
+
+gulp.task('js:build', function() {
+  return gulp.src( path.src.js )
     .pipe(customPlumber('Error Running JS'))
     .pipe(jshint('./.jshintrc'))
     .pipe(notify(function (file) {
@@ -74,40 +94,57 @@ gulp.task('js', function() {
       }
     }))
     .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(concat('custom.js'))
     .on('error', gutil.log)
-    .pipe(gulpif( !devMode, uglify()))
-    .pipe(gulp.dest(outputDir + 'js'))
+    .pipe(gulp.dest( path.build.jsdir ))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
 
-gulp.task('images', function() {
-    return gulp.src( imgSource )
+
+/* =====================================================
+    IMAGE
+    ===================================================== */
+
+gulp.task('img:build', function() {
+  return gulp.src( path.src.img )
     .pipe(imagemin({ progressive: true }))
-    .pipe(gulp.dest(outputDir + 'img'));
+    .pipe(gulp.dest( path.build.imgdir ))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
-gulp.task('serve', ['html', 'sass', 'js', 'images', 'watch'], function() {
-  browserSync.init({
-    server: {
-      baseDir: outputDir
-    },
-    port: 8001
-  });
+
+/* =====================================================
+    PLUGINS
+    ===================================================== */
+
+gulp.task('plugins:build', function() {
+  return gulp.src( path.src.plugins )
+    .pipe(gulp.dest( path.build.plugdir ))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
-gulp.task('default', ['serve', 'move']);
 
-gulp.task('watch', function() {
-  gulp.watch(htmlSources, ['html']);
-  gulp.watch('app/_sections/**/*.htm', ['html']);
-  gulp.watch(outputDir + '**/*.html').on('change', browserSync.reload);
-  gulp.watch(sassSources, ['sass']);
-  gulp.watch(jsSources, ['js']);
-  gulp.watch(imgSource, ['images']);
+/* =====================================================
+    WATCH BUILD
+    ===================================================== */
+
+gulp.task('watch:build', function() {
+  gulp.watch( path.src.html, ['html:build'] );
+  gulp.watch( path.src.htminc, ['html:build'] );
+  gulp.watch( path.src.scss, ['scss:build'] );
+  gulp.watch( path.src.js, ['js:build'] );
+  gulp.watch( path.src.img, ['img:build'] );
 });
+
+
+/* =====================================================
+    ERROR MESSAGE
+    ===================================================== */
 
 function customPlumber(errTitle) {
   return plumber({
@@ -120,11 +157,30 @@ function customPlumber(errTitle) {
   });
 }
 
-// Copy other files
-gulp.task('move', function() {
-  'use strict';
 
-  gulp.src('app/plugins/**/*.*')
-  .pipe(gulp.dest(outputDir+'plugins'));
+/* =====================================================
+    BUILD TASK
+    ===================================================== */
 
+gulp.task('build', [
+  'html:build',
+  'scss:build',
+  'js:build',
+  'img:build',
+  'plugins:build',
+  'watch:build'
+], function() {
+  browserSync.init({
+    server: {
+      baseDir: path.build.dir
+    },
+    port: 8001
+  });
 });
+
+
+/* =====================================================
+    DEFAULT TASK
+    ===================================================== */
+
+gulp.task('default', ['build']);
