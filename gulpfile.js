@@ -26,22 +26,25 @@ var path = {
         plugins : 'app/plugins/**/*.*',
         js      : 'app/js/*.js',
         scss    : 'app/scss/**/*.scss',
-        img     : 'app/img/**/*.+(png|jpg|gif)'
+        img     : 'app/img/**/*.+(png|jpg|gif)',
+        options : 'app/options/**/*.*'
     },
     build: { // development
-        dir     : 'development/',
-        html    : 'development/*.html',
-        plugins : 'development/plugins/**/*.*',
-        plugdir : 'development/plugins/',
-        js      : 'development/js/*.js',
-        jsdir   : 'development/js/',
-        css     : 'development/css/*.css',
-        cssdir  : 'development/css/',
-        img     : 'development/img/**/*.+(png|jpg|gif)',
-        imgdir  : 'development/img/',
+        dir     : 'build/',
+        html    : 'build/*.html',
+        plugins : 'build/plugins/**/*.*',
+        plugdir : 'build/plugins/',
+        js      : 'build/js/*.js',
+        jsdir   : 'build/js/',
+        css     : 'build/css/*.css',
+        cssdir  : 'build/css/',
+        img     : 'build/img/**/*.+(png|jpg|gif)',
+        imgdir  : 'build/img/'
     },
     public: { // production
-        dir     : 'public/'
+        dir     : 'public/',
+        imgdir  : 'public/img/',
+        optdir  : 'public/options/'
     }
 };
 
@@ -130,6 +133,19 @@ gulp.task('plugins:build', function() {
 
 
 /* =====================================================
+    COPY IMAGE
+    ===================================================== */
+
+  gulp.task('copy:images', function() {
+    return gulp.src( path.build.img )
+      .pipe(gulp.dest( path.public.imgdir ))
+      .pipe(browserSync.reload({
+        stream: true
+      }));
+  });
+
+
+/* =====================================================
     WATCH BUILD
     ===================================================== */
 
@@ -175,6 +191,22 @@ gulp.task('build', [
       baseDir: path.build.dir
     },
     port: 8001
+  });
+});
+
+
+/* =====================================================
+    PUBLIC TASK
+    ===================================================== */
+
+gulp.task('public', [
+  'copy:images'
+], function() {
+  browserSync.init({
+    server: {
+      baseDir: path.public.dir
+    },
+    port: 8002
   });
 });
 

@@ -5,6 +5,6 @@ Thumbs.db
 .sass-cache
 npm-debug.log
 node_modules
-development
+build
 public
 dist
