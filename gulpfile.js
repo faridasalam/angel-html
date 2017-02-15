@@ -3,48 +3,34 @@
 var gulp         = require('gulp');
 var sass         = require('gulp-sass');
 var gutil        = require('gulp-util');
-var w3cjs        = require('gulp-w3cjs');
 var jshint       = require('gulp-jshint');
-var scsslint     = require('gulp-scss-lint');
 var sourcemaps   = require('gulp-sourcemaps');
 var gulpif       = require('gulp-if');
 var uglify       = require('gulp-uglify');
-var concat       = require('gulp-concat');
 var stylish      = require('jshint-stylish');
 var plumber      = require('gulp-plumber');
 var notify       = require('gulp-notify');
-var minifyHTML   = require('gulp-minify-html');
 var imagemin     = require('gulp-imagemin');
 var fileinclude  = require('gulp-file-include');
+var inject       = require('gulp-inject-string');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync  = require('browser-sync').create();
+
+var devMode      = false;
 
 var path = {
     src: { // source
         html    : 'app/*.html',
-        htminc  : 'app/_sections/',
+        htminc  : 'app/_sections/**/*.htm',
+        incdir  : 'app/_sections/',
         plugins : 'app/plugins/**/*.*',
         js      : 'app/js/*.js',
         scss    : 'app/scss/**/*.scss',
         img     : 'app/img/**/*.+(png|jpg|gif)',
         options : 'app/options/**/*.*'
     },
-    build: { // development
-        dir     : 'build/',
-        html    : 'build/*.html',
-        plugins : 'build/plugins/**/*.*',
-        plugdir : 'build/plugins/',
-        js      : 'build/js/*.js',
-        jsdir   : 'build/js/',
-        css     : 'build/css/*.css',
-        cssdir  : 'build/css/',
-        img     : 'build/img/**/*.+(png|jpg|gif)',
-        imgdir  : 'build/img/'
-    },
-    public: { // production
-        dir     : 'public/',
-        imgdir  : 'public/img/',
-        optdir  : 'public/options/'
+    build: { // build
+        dir     : devMode ? 'builds/development/' : 'builds/public/',
     }
 };
 
@@ -56,7 +42,8 @@ var path = {
 gulp.task('html:build', function() {
   return gulp.src( path.src.html )
     .pipe(customPlumber('Error Running html-include'))
-    .pipe(fileinclude({ basepath: path.src.htminc }))
+    .pipe(gulpif( !devMode, inject.before('</body', '<script src="test.js"></script>\n')))
+    .pipe(fileinclude({ basepath: path.src.incdir }))
     .pipe(gulp.dest( path.build.dir ))
     .pipe(browserSync.reload({
       stream: true
@@ -75,8 +62,8 @@ gulp.task('scss:build', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest( path.build.cssdir ))
+    .pipe(sourcemaps.write('/maps'))
+    .pipe(gulp.dest( path.build.dir + 'css/' ))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -98,7 +85,8 @@ gulp.task('js:build', function() {
     }))
     .pipe(jshint.reporter('jshint-stylish'))
     .on('error', gutil.log)
-    .pipe(gulp.dest( path.build.jsdir ))
+    .pipe(gulpif( !devMode, uglify()))
+    .pipe(gulp.dest( path.build.dir + 'js/' ))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -112,7 +100,7 @@ gulp.task('js:build', function() {
 gulp.task('img:build', function() {
   return gulp.src( path.src.img )
     .pipe(imagemin({ progressive: true }))
-    .pipe(gulp.dest( path.build.imgdir ))
+    .pipe(gulp.dest( path.build.dir + 'img/' ))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -125,7 +113,7 @@ gulp.task('img:build', function() {
 
 gulp.task('plugins:build', function() {
   return gulp.src( path.src.plugins )
-    .pipe(gulp.dest( path.build.plugdir ))
+    .pipe(gulp.dest( path.build.dir + 'plugins/' ))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -133,16 +121,16 @@ gulp.task('plugins:build', function() {
 
 
 /* =====================================================
-    COPY IMAGE
+    OPTIONS
     ===================================================== */
 
-  gulp.task('copy:images', function() {
-    return gulp.src( path.build.img )
-      .pipe(gulp.dest( path.public.imgdir ))
-      .pipe(browserSync.reload({
-        stream: true
-      }));
-  });
+gulp.task('options:build', function() {
+  return gulp.src( path.src.options )
+    .pipe(gulpif( !devMode, gulp.dest( path.build.dir + 'options/' )))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
 
 
 /* =====================================================
@@ -155,6 +143,7 @@ gulp.task('watch:build', function() {
   gulp.watch( path.src.scss, ['scss:build'] );
   gulp.watch( path.src.js, ['js:build'] );
   gulp.watch( path.src.img, ['img:build'] );
+  gulp.watch( path.src.img, ['options:build'] );
 });
 
 
@@ -184,6 +173,7 @@ gulp.task('build', [
   'js:build',
   'img:build',
   'plugins:build',
+  'options:build',
   'watch:build'
 ], function() {
   browserSync.init({
@@ -191,22 +181,6 @@ gulp.task('build', [
       baseDir: path.build.dir
     },
     port: 8001
-  });
-});
-
-
-/* =====================================================
-    PUBLIC TASK
-    ===================================================== */
-
-gulp.task('public', [
-  'copy:images'
-], function() {
-  browserSync.init({
-    server: {
-      baseDir: path.public.dir
-    },
-    port: 8002
   });
 });
 
