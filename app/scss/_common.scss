@@ -79,3 +79,38 @@ a{
 .padding{
   padding:100px 0 70px !important;
 }
+
+/*=== 2.OPTIONS ===*/
+.navbar .container{
+  position:relative;
+}
+.nav-wrapper.bb-fixed-header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 999;
+  .header-bg{
+    display: none;
+  }
+  .lightHeader{
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+    @include transition(all 0.3s ease-in-out);
+    @include tablet{
+      height: 80px;
+    }
+    .navbar-brand{
+      top: 0;
+      width: 180px;
+      padding: 10px 40px;
+    }
+  }
+}
+.bb-fixed-header{
+  .navbar-default .navbar-nav > li > a {
+    padding: 30px 30px;
+  }
+}

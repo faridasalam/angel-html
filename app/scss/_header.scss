@@ -31,13 +31,7 @@
   }
 }
 /*=== 3. NAVBAR ===*/
-.bb-fixed-header {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 999;
-}
+
 .navbar-default{
   background-color: transparent;
   border: none;
@@ -429,81 +423,6 @@
     }
     @include tablet{
       height: 110px;
-    }
-  }
-}
-.nav-wrapper.bb-fixed-header{
-  position:fixed;
-  right:0;
-  left:0;
-  top: 0;
-  .header-bg{
-    @include transition(all 0.3s ease-in-out);
-      top: 0;
-      @include box-shadow(0, 4px, 2px, rgba($black-color, .1) );
-    @include tablet{
-      height: 80px;
-    }
-    .header-left{
-      @include tablet{
-        height: 80px;
-      }
-    }
-    .header-right{
-      @include tablet{
-        height: 80px;
-      }
-    }
-  }
-  .lightHeader{
-      right: 0;
-      left: 0;
-      top: 0;
-      z-index: 1030;
-      height: 110px;
-      @include transition(all 0.3s ease-in-out);
-    @include tablet{
-      height: 80px;
-    }
-    .navbar-brand{
-      height: auto;
-      padding: 15px;
-      width: 160px;
-      @include tablet{
-        height: auto;
-        padding:15px;
-        width: 190px;
-      }
-    }
-    .navbar-nav.navbar-right {
-      @include tablet{
-        margin-top: 13px;
-      }
-    }
-      .topList{
-        display: none;
-      }
-      .searchBox {
-        display: none;
-    }
-  }
-  .navbar-default .navbar-nav.navbar-right {
-      margin-right: 0;
-  }
-  .navbar-nav  li.open,  
-  .navbar-nav  li.dropdown{
-    .dropdown-menu{
-      @include tablet {
-        border:1px solid #e0e1e2;
-        @include box-shadow(0, 4px, 10px, rgba(0,0,0,0.33));
-      }
-      ul.dropdown-menu{
-        @include tablet {
-          margin-left: 1px;
-          border-left:1px solid #e0e1e2;
-          border-top:3px solid transparent;
-        }
-      }
     }
   }
 }

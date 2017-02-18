@@ -171,6 +171,67 @@
   <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
   <script src="js/custom.js"></script>
 
+  <!--=== option Switcher ===-->
+  <link rel="stylesheet" href="plugins/options/animate.css">
+  <link rel="stylesheet" href="plugins/options/optionswitch.css">
+
+  <i class="option-switcher-btn fa fa-gear hidden-xs"></i>
+  <div class="option-switcher animated">
+    <div class="option-swticher-header">
+      <div class="option-switcher-heading">Template Options</div>            
+      <div class="theme-close"><i class="fa fa-close"></i></div>
+    </div>
+    <div class="option-swticher-body">
+      <!-- Theme Colors -->
+      <ul class="list-unstyled color-options">
+        <li class="theme-default theme-active" data-color="default"></li>
+        <li class="theme-color1" data-color="color-option1"></li>
+        <li class="theme-color2" data-color="color-option2"></li>
+        <li class="theme-color3 last" data-color="color-option3"></li>
+      </ul>
+      <!-- Layout Styles -->
+      <div class="row no-col-space layoutStyle">
+        <div class="col-xs-6">
+          <a href="javascript:void(0);" class="btn-u  btn-block active-switcher-btn wide-layout-btn">Wide</a>                
+        </div>
+        <div class="col-xs-6">
+          <a href="javascript:void(0);" class="btn-u btn-block boxed-layout-btn">Boxed</a>
+        </div>                
+      </div>
+      <!-- Background pattern -->
+      <div class="bg-patern">
+        <h3>Background pattern</h3>
+        <ul class="list-unstyled">
+          <li class="pattern-default pattern-active"></li>
+          <li class="pattern1"></li>
+          <li class="pattern2"></li>
+          <li class="pattern3 last"></li>
+          <li class="pattern4"></li>
+          <li class="pattern5"></li>
+          <li class="pattern6"></li>
+          <li class="pattern7 last"></li>
+        </ul>
+      </div> 
+      <!-- Header Styles -->
+      <div class="row no-col-space headerStyle">
+        <div class="col-xs-6">
+          <a href="javascript:void(0);" class="btn-u btn-block active-switcher-btn fixed-header">Fixed header</a>
+        </div>
+        <div class="col-xs-6">
+          <a href="javascript:void(0);" class="btn-u btn-block static-header">Static header</a>
+        </div>
+      </div>              
+    </div>
+  </div>
+
+  <script src="plugins/options/optionswitcher.js"></script>
+  <script>
+    jQuery(document).ready(function() {
+      OptionSwitcher.initOptionSwitcher();      
+    });
+  </script>
+  <!--/option-switcher-->
+
 </body>
 
 </html>
