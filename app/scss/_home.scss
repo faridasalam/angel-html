@@ -1109,6 +1109,17 @@ figure{
     @include desktops{
       min-height: 445px;
     }
+    .item-inner{
+      width: 100%;
+      float: left;
+      position: relative;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+      @include tablet{
+        width: 25%;
+      }
+    }
   }
   .carousel-indicators{
     li{
