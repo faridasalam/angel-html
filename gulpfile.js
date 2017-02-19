@@ -16,7 +16,7 @@ var inject       = require('gulp-inject-string');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync  = require('browser-sync').create();
 
-var devMode      = false;
+var devMode      = true;
 
 var path = {
     src: { // source
