@@ -216,7 +216,6 @@
             padding: 8px 12px;
           }
           &:hover{
-            padding-left: 22px;
             color: $primary-color;
           }
         }
@@ -288,7 +287,6 @@
         &:hover{
           background-color: $white-color;
           color: $primary-color ;
-          padding-left: 22px;
         }
       }
       .dropdown-menu{
@@ -538,6 +536,10 @@
       right: -7px;
     }
   }
+}
+.nav-wrapper.bb-fixed-header .cart_btn {
+  top: 20px;
+  right: 30px;
 }
 .navbar-collapse ul.navbar-nav.in > li.dropdown > a:after{
   position: relative;
